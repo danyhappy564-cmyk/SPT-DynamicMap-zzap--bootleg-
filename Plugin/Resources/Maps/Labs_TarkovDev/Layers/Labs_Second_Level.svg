@@ -1,9 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" viewBox="0 0 746.42 639.82">
 <g transform="translate(26.42 0)">
-  <style>
-    .shadow{filter:drop-shadow(0 0 8px #000)}
-  </style>
-  <g id="Second_Level" class="shadow">
+  <g id="Second_Level">
     <g id="Rooms">
       <path d="M490.001 332.767h49v12h-25v30h25v12h-49Z" style="fill:#595959"/>
       <path d="M490.001 332.767h49v12h-25v30h25v12h-49Zm1 1v52h47v-10h-25v-32h25v-10Z"/>
