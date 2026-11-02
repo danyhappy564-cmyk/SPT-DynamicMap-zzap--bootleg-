@@ -193,10 +193,11 @@ namespace DynamicMaps.UI.Components
             GameObject.Destroy(label.gameObject);
         }
 
-        public void LoadMap(MapDef mapDef, RectTransform maskTransform)
+        public void LoadMap(MapDef mapDef, RectTransform maskTransform, bool force = false)
         {
             _maskTransform = maskTransform;
-            if (mapDef == null || CurrentMapDef == mapDef)
+            // zzap: force rebuilds the same map, labels and markers take their text on creation (language change)
+            if (mapDef == null || (CurrentMapDef == mapDef && !force))
             {
                 return;
             }

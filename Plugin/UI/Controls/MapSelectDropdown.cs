@@ -21,6 +21,7 @@ namespace DynamicMaps.UI.Controls
         private readonly Dictionary<string, DateTime> _writeTimes = new Dictionary<string, DateTime>();
         private readonly Dictionary<string, MapDef> _mapDefs = new Dictionary<string, MapDef>();
         private List<MapDef> _selectableMapDefs;
+        private bool _listKorean;
         private string _nameFilter = null;
 
         public static MapSelectDropdown Create(GameObject prefab, Transform parent)
@@ -50,12 +51,15 @@ namespace DynamicMaps.UI.Controls
         private void ChangeAvailableMapDefs(IEnumerable<MapDef> mapDefs)
         {
             // check if these are the same map defs as before
-            if (_selectableMapDefs != null && Enumerable.SequenceEqual(mapDefs, _selectableMapDefs))
+            // zzap: also rebuild when the language changed, the names are translated
+            if (_selectableMapDefs != null && _listKorean == Lang.IsKorean && Enumerable.SequenceEqual(mapDefs, _selectableMapDefs))
             {
                 return;
             }
 
+            _listKorean = Lang.IsKorean;
             _selectableMapDefs = mapDefs.ToList();
+            _dropdown.SetLabelText(Lang.T("Select a Map", "지도 선택"));
 
             _dropdown.Show(_selectableMapDefs.Select(def => def.LocalizedName));
 

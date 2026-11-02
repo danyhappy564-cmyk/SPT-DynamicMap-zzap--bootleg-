@@ -359,11 +359,13 @@ namespace DynamicMaps.UI
             _isShown = true;
             gameObject.SetActive(GameUtils.ShouldShowMapInRaid());
 
+            // zzap: Auto follows the game language and F12 can switch it; read it before the dropdown names the maps
+            Lang.Refresh();
+
             // populate map select dropdown
             _mapSelectDropdown.LoadMapDefsFromPath(MapRelPath);
 
-            // zzap: Auto follows the game language and F12 can switch it; labels are made on load, so reload on a change
-            Lang.Refresh();
+            // labels and markers are made on load, so reload the open map on a language change
             if (_mapView.CurrentMapDef != null && _loadedKorean != Lang.IsKorean)
             {
                 ChangeMap(_mapView.CurrentMapDef);
@@ -1113,6 +1115,7 @@ namespace DynamicMaps.UI
                 return;
             }
 
+            var languageChanged = _loadedKorean != Lang.IsKorean;
             _loadedKorean = Lang.IsKorean;
             Plugin.Log.LogInfo($"MapScreen: Loading map {mapDef.DisplayName}");
 
@@ -1127,7 +1130,7 @@ namespace DynamicMaps.UI
             _targetZoom = 0f;
             _savedMainMapPos = Vector2.zero;
             
-            _mapView.LoadMap(mapDef, _scrollMask.GetRectTransform());
+            _mapView.LoadMap(mapDef, _scrollMask.GetRectTransform(), languageChanged);
 
             _mapSelectDropdown.OnLoadMap(mapDef);
             _levelSelectSlider.OnLoadMap(mapDef, _mapView.SelectedLevel);

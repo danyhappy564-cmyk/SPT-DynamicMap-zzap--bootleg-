@@ -161,11 +161,9 @@ namespace DynamicMaps.Config
                     new ConfigurationManagerAttributes { })));
 
             Lang.Init(Language.Value);
-            Language.SettingChanged += (_, _) =>
-            {
-                Lang.Set(Language.Value);
-                ApplyLanguage();
-            };
+            Language.SettingChanged += (_, _) => Lang.Set(Language.Value);
+            // zzap: Auto can also change when the game language does, so F12 texts follow the actual change
+            Lang.OnChanged += ApplyLanguage;
 
             #endregion
 
