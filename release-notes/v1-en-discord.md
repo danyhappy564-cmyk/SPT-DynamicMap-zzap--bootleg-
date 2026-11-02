@@ -8,7 +8,7 @@
 - Picks the rework map when a Manimal backport / MapVariants runs it, the original map otherwise
 - F12 "Language": Auto follows the game language, so an English game shows English maps
 - Minimap: no recalculation on the same floor, zoom saved once after you stop (not measured in raid yet)
-- Multi-floor maps show doors of other floors faded, door names on hover only
+- New maps show minefields (red), sniper zones (orange hatching) and out-of-bounds areas (darkened) at their real in-game positions
 
 ■ Install
 - Extract DynamicMaps-zzap--bootleg--v1.zip into your SPT folder (settings kept)

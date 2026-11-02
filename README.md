@@ -19,13 +19,13 @@
 
 ## 변경 이력
 
-- 2026-11-03 01:03 — v1: 새 지도 6종(터미널·인터체인지 리워크·등대 리워크·연구소 리워크·공장 클래식·쇄빙선), 지도·F12 한국어(자동이면 게임 언어를 따름), 원본/리워크 지도 자동 선택, 미니맵 끊김 줄이기. 원본 1.2.1 기준.
+- 2026-11-03 01:57 — v1: 새 지도 6종(터미널·인터체인지 리워크·등대 리워크·연구소 리워크·공장 클래식·쇄빙선), 새 지도에 지뢰·저격·못 가는 구역 표시, 지도·F12 한국어(자동이면 게임 언어를 따름), 원본/리워크 지도 자동 선택, 미니맵 끊김 줄이기. 원본 1.2.1 기준.
 
 ## 무엇이 다른가
 
 SPT 4.1용 DynamicMaps(게임 지도 화면을 쓸 만한 지도로 바꾸는 모드)를 고친 판입니다.
 
-- **새 지도**: 터미널, 인터체인지 리워크, 등대 리워크, 연구소 리워크(보일러실 위 사무실), 공장 클래식. 지명·탈출구·이동 지점·잠긴 문·스위치 표시 포함.
+- **새 지도**: 터미널, 인터체인지 리워크, 등대 리워크, 연구소 리워크(보일러실 위 사무실), 공장 클래식. 지명·탈출구·이동 지점·잠긴 문·스위치 표시 포함. 새로 만든 지도 3장에는 지뢰 지역(빨강)·저격 구역(주황 빗금)·못 가는 구역(어둡게)도 게임 데이터 위치로 그렸습니다.
 - **쇄빙선**: 릴리즈 zip에 들어 있습니다(그림 제작: 파인애플애호가). 저장소에는 올리지 않았습니다.
 - **원본/리워크 지도 자동 선택**: MapVariants나 Manimal 백포트 모드가 그 판을 리워크 맵으로 돌리면 리워크 지도, 아니면 원본 지도를 띄웁니다.
 - **한국어**: F12 설정과 지도 글자(지명·탈출구·문·층 이름). F12 "언어" = 자동 / 한국어 / English.
@@ -51,7 +51,7 @@ SPT 4.1용 DynamicMaps(게임 지도 화면을 쓸 만한 지도로 바꾸는 �
 
 An edited build of DynamicMaps for SPT 4.1 (the mod that turns the in-game map screen into a usable map).
 
-- **New maps**: Terminal, Interchange rework, Lighthouse rework, Labs rework (office above the boiler room), Factory Classic, and Icebreaker. Labels, extracts, transits, locked doors and switches included.
+- **New maps**: Terminal, Interchange rework, Lighthouse rework, Labs rework (office above the boiler room), Factory Classic, and Icebreaker. Labels, extracts, transits, locked doors and switches included. The three newly drawn maps also show minefields (red), sniper zones (orange hatching) and out-of-bounds areas (darkened) from the game data.
 - **Icebreaker**: shipped in the release zip only, not in this repository (map art by 파인애플애호가).
 - **Original/rework map picked automatically**: when MapVariants or a Manimal backport runs the rework map for a raid, the rework map is shown; otherwise the original.
 - **Korean**: F12 settings and map texts. F12 "Language" = Auto (follows the game language) / Korean / English.
