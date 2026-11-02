@@ -361,60 +361,6 @@
       "FontSize": 14
     },
     {
-      "Text": "Railway Exfil",
-      "Position": {
-        "x": 474.57,
-        "y": -433.74,
-        "z": 19.92
-      },
-      "FontSize": 12
-    },
-    {
-      "Text": "Saferoom Exfil",
-      "Position": {
-        "x": -47.73,
-        "y": 44.055,
-        "z": 22.97
-      },
-      "FontSize": 12
-    },
-    {
-      "Text": "Emercom Checkpoint",
-      "Position": {
-        "x": -321.56,
-        "y": 266.74,
-        "z": 24.18
-      },
-      "FontSize": 12
-    },
-    {
-      "Text": "Scav Camp (Co-Op)",
-      "Position": {
-        "x": -97.48,
-        "y": -73.09,
-        "z": 18.12
-      },
-      "FontSize": 12
-    },
-    {
-      "Text": "Sniper Exit",
-      "Position": {
-        "x": 613.9,
-        "y": 71.3,
-        "z": 27.9
-      },
-      "FontSize": 12
-    },
-    {
-      "Text": "Power Station V-Ex",
-      "Position": {
-        "x": -302.89,
-        "y": -367.73,
-        "z": 21.65
-      },
-      "FontSize": 12
-    },
-    {
       "Text": "Secret Extraction",
       "Position": {
         "x": -138.53,
@@ -484,57 +430,6 @@
         "z": 22.891
       },
       "Category": "Switch"
-    },
-    {
-      "Text": "Emercom Checkpoint",
-      "ImagePath": "Markers/exit.png",
-      "Position": {
-        "x": -321.56,
-        "y": 266.74,
-        "z": 21.9496
-      },
-      "Category": "Extract",
-      "ShowInRaid": false,
-      "Color": {
-        "r": 0.0,
-        "g": 1.0,
-        "b": 0.0,
-        "a": 1.0
-      }
-    },
-    {
-      "Text": "Railway Exfil",
-      "ImagePath": "Markers/exit.png",
-      "Position": {
-        "x": 474.57,
-        "y": -433.74,
-        "z": 19.92
-      },
-      "Category": "Extract",
-      "ShowInRaid": false,
-      "Color": {
-        "r": 0.0,
-        "g": 1.0,
-        "b": 0.0,
-        "a": 1.0
-      }
-    },
-    {
-      "Text": "Saferoom Exfil",
-      "ImagePath": "Markers/exit.png",
-      "Position": {
-        "x": -47.73,
-        "y": 44.055,
-        "z": 22.97
-      },
-      "Category": "Extract",
-      "ShowInRaid": false,
-      "Color": {
-        "r": 0.0,
-        "g": 1.0,
-        "b": 0.0,
-        "a": 1.0
-      }
     },
     {
       "Text": "Power Substation Utility Cabin",
@@ -773,6 +668,142 @@
         "a": 1.0
       },
       "AssociatedItemId": "664d3dd590294949fe2d81b7"
+    },
+    {
+      "Text": "Emercom Checkpoint",
+      "ImagePath": "Markers/exit.png",
+      "Position": {
+        "x": -321.56,
+        "y": 266.74,
+        "z": 24.18
+      },
+      "Category": "Extract",
+      "ShowInRaid": false,
+      "Color": {
+        "r": 0.0,
+        "g": 1.0,
+        "b": 0.0,
+        "a": 1.0
+      }
+    },
+    {
+      "Text": "Railway Exfil",
+      "ImagePath": "Markers/exit.png",
+      "Position": {
+        "x": 474.57,
+        "y": -433.74,
+        "z": 19.92
+      },
+      "Category": "Extract",
+      "ShowInRaid": false,
+      "Color": {
+        "r": 0.0,
+        "g": 1.0,
+        "b": 0.0,
+        "a": 1.0
+      }
+    },
+    {
+      "Text": "Saferoom Exfil",
+      "ImagePath": "Markers/exit.png",
+      "Position": {
+        "x": -47.73,
+        "y": 44.055,
+        "z": 22.97
+      },
+      "Category": "Extract",
+      "ShowInRaid": false,
+      "Color": {
+        "r": 0.0,
+        "g": 1.0,
+        "b": 0.0,
+        "a": 1.0
+      }
+    },
+    {
+      "Text": "Power Station V-Ex",
+      "ImagePath": "Markers/exit.png",
+      "Position": {
+        "x": -302.89,
+        "y": -367.73,
+        "z": 21.65
+      },
+      "Category": "Extract",
+      "ShowInRaid": false,
+      "Color": {
+        "r": 0.0,
+        "g": 1.0,
+        "b": 0.0,
+        "a": 1.0
+      }
+    },
+    {
+      "Text": "Sniper Exit",
+      "ImagePath": "Markers/exit.png",
+      "Position": {
+        "x": 613.9,
+        "y": 71.3,
+        "z": 27.9
+      },
+      "Category": "Extract",
+      "ShowInRaid": false,
+      "Color": {
+        "r": 0.0,
+        "g": 1.0,
+        "b": 0.0,
+        "a": 1.0
+      }
+    },
+    {
+      "Text": "Scav Camp (Co-Op)",
+      "ImagePath": "Markers/exit.png",
+      "Position": {
+        "x": -97.48,
+        "y": -73.09,
+        "z": 18.12
+      },
+      "Category": "Extract",
+      "ShowInRaid": false,
+      "Color": {
+        "r": 1.0,
+        "g": 0.460784316,
+        "b": 0.007843138,
+        "a": 1.0
+      }
+    },
+    {
+      "Text": "Transit to Customs",
+      "ImagePath": "Markers/transit.png",
+      "Position": {
+        "x": 280.74,
+        "y": 434.11,
+        "z": 23.28
+      },
+      "Category": "Transit",
+      "ShowInRaid": false,
+      "Color": {
+        "r": 1.0,
+        "g": 0.368627429,
+        "b": 0.00627450971,
+        "a": 1.0
+      }
+    },
+    {
+      "Text": "Transit to Streets of Tarkov",
+      "ImagePath": "Markers/transit.png",
+      "Position": {
+        "x": 271.85,
+        "y": -453.65,
+        "z": 24.1
+      },
+      "Category": "Transit",
+      "ShowInRaid": false,
+      "Color": {
+        "r": 1.0,
+        "g": 0.368627429,
+        "b": 0.00627450971,
+        "a": 1.0
+      }
     }
   ]
 }

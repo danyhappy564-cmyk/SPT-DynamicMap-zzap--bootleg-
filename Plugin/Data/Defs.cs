@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text.RegularExpressions;
 using DynamicMaps.Utils;
 using Newtonsoft.Json;
 using UnityEngine;
@@ -95,8 +96,11 @@ namespace DynamicMaps.Data
         // zzap: "original" or "backport" for maps that MapVariants or a backport mod swaps; empty = any version
         public string Variant { get; set; }
 
+        // zzap: the original packs carry their data source in the name, e.g. "Factory (TarkovDev)"; the dropdown hides it
         [JsonIgnore]
-        public string LocalizedName => Lang.Map(DisplayName);
+        public string LocalizedName => SourceSuffix.Replace(Lang.Map(DisplayName), "");
+
+        private static readonly Regex SourceSuffix = new Regex(@"\s*\((TarkovDev|TarkovData)\)$", RegexOptions.IgnoreCase);
 
         public static MapDef LoadFromPath(string absolutePath)
         {
