@@ -1,0 +1,116 @@
+using System.Collections.Generic;
+
+namespace DynamicMaps.Config
+{
+    // zzap: Korean F12 texts, keyed by the English section / key that stay in the .cfg file
+    internal static class SettingsKo
+    {
+        public static readonly Dictionary<string, string> Sections = new Dictionary<string, string>
+        {
+            ["0. Language"] = "0. 언어",
+            ["1. General"] = "1. 일반",
+            ["2. Dynamic Markers"] = "2. 표시할 마커",
+            ["3. Progression"] = "3. 정보 레벨(진행도)",
+            ["4. In-Raid"] = "4. 레이드 중",
+            ["5. Mini-map"] = "5. 미니맵",
+            ["6. Marker Colors"] = "6. 마커 색",
+            ["7. External Mod Support"] = "7. 다른 모드 지원",
+        };
+
+        public static readonly Dictionary<string, (string Name, string Description)> Entries = new Dictionary<string, (string, string)>
+        {
+            ["Language"] = ("언어", "F12 설정과 지도 글자의 언어입니다. 자동은 윈도우 표시 언어를 따릅니다(한국어 윈도우면 한국어)."),
+
+            ["Replace Map Screen"] = ("기본 지도 화면 바꾸기", "게임 기본 지도 화면을 이 모드 지도로 바꿉니다. 바꾼 뒤에는 다른 화면에 갔다 와야 적용됩니다."),
+            ["Center on Player Hotkey"] = ("내 위치로 이동 키", "지도가 열려 있을 때 누르면 내 위치를 가운데로 옮깁니다."),
+            ["Move Map Up Hotkey"] = ("지도 위로 이동 키", "지도를 위로 움직이는 키"),
+            ["Move Map Down Hotkey"] = ("지도 아래로 이동 키", "지도를 아래로 움직이는 키"),
+            ["Move Map Left Hotkey"] = ("지도 왼쪽 이동 키", "지도를 왼쪽으로 움직이는 키"),
+            ["Move Map Right Hotkey"] = ("지도 오른쪽 이동 키", "지도를 오른쪽으로 움직이는 키"),
+            ["Move Map Hotkey Speed"] = ("지도 이동 속도", "키로 지도를 움직이는 속도(초당 지도 크기의 몇 %)"),
+            ["Change Map Level Up Hotkey"] = ("위층 보기 키", "지도 층을 한 층 위로 바꿉니다(지도 화면에서 Shift+휠 위도 같음)."),
+            ["Change Map Level Down Hotkey"] = ("아래층 보기 키", "지도 층을 한 층 아래로 바꿉니다(지도 화면에서 Shift+휠 아래도 같음)."),
+            ["Zoom Menu Map to Mouse"] = ("마우스 위치로 확대", "인벤토리·레이드 밖 지도 화면에서 확대 키를 누르면 화면 가운데 대신 마우스 위치를 기준으로 확대합니다."),
+            ["Zoom Map In Hotkey"] = ("지도 확대 키", "지도를 확대하는 키(지도 화면에서 휠 위도 같음)"),
+            ["Zoom Map Out Hotkey"] = ("지도 축소 키", "지도를 축소하는 키(지도 화면에서 휠 아래도 같음)"),
+            ["Zoom Map Hotkey Speed"] = ("확대·축소 속도", "키로 확대·축소하는 속도"),
+            ["Dump Info Hotkey"] = ("정보 저장 키(개발용)", "지도가 열려 있을 때 누르면 탈출구·전리품·스위치 위치를 json으로 플러그인 폴더에 저장합니다. 지도 제작용입니다."),
+
+            ["Show Player Marker"] = ("내 마커 표시", "레이드 중 내 위치 마커를 보여 줍니다."),
+            ["Show Friendly Player Markers"] = ("아군 마커 표시", "레이드 중 아군 플레이어 마커를 보여 줍니다."),
+            ["Show Enemy Player Markers"] = ("적 PMC 마커 표시", "레이드 중 적 PMC 마커를 보여 줍니다(주로 디버그용)."),
+            ["Show Scav Markers"] = ("스캐브 마커 표시", "레이드 중 적 스캐브 마커를 보여 줍니다(주로 디버그용)."),
+            ["Show Boss Markers"] = ("보스 마커 표시", "레이드 중 보스 마커를 보여 줍니다."),
+            ["Show Locked Door Status"] = ("잠긴 문 상태 표시", "열쇠를 가지고 있는지에 따라 잠긴 문 마커 상태를 바꿔 보여 줍니다."),
+            ["Show Quests In Raid"] = ("퀘스트 표시", "레이드 중 퀘스트 위치를 보여 줍니다."),
+            ["Show Extracts In Raid"] = ("탈출구 표시", "레이드 중 탈출구를 보여 줍니다."),
+            ["Show Extracts Status In Raid"] = ("탈출구 상태 색", "레이드 중 탈출구를 상태(열림·닫힘·조건 있음)에 따라 색으로 구분합니다."),
+            ["Show Transit Points In Raid"] = ("이동(트랜짓) 지점 표시", "레이드 중 다른 맵으로 가는 이동 지점을 보여 줍니다."),
+            ["Show Secret Extracts In Raid"] = ("비밀 탈출구 표시", "레이드 중 비밀 탈출구를 보여 줍니다."),
+            ["Show Dropped Backpack In Raid"] = ("버린 내 배낭 표시", "레이드 중 내가 내려놓은 배낭 위치를 보여 줍니다(다른 사람 것은 아님)."),
+            ["Show wish listed items In Raid"] = ("찜한 아이템 표시", "레이드 중 위시리스트에 넣은 아이템을 지도에 보여 줍니다."),
+            ["Show BTR In Raid"] = ("BTR 표시", "레이드 중 BTR 위치를 보여 줍니다."),
+            ["Show Airdrops In Raid"] = ("보급품 표시", "레이드 중 보급품이 떨어지면 위치를 보여 줍니다."),
+            ["Show Hidden Stashes In Raid"] = ("숨겨진 은닉처 표시", "레이드 중 숨겨진 은닉처를 보여 줍니다."),
+            ["Show Friendly Corpses In Raid"] = ("아군 시체 표시", "레이드 중 아군 시체를 보여 줍니다."),
+            ["Show Player-killed Corpses In Raid"] = ("내가 죽인 시체 표시", "레이드 중 내가 죽인 시체를 보여 줍니다. 보스는 다른 색입니다."),
+            ["Show Friendly-killed Corpses In Raid"] = ("아군이 죽인 시체 표시", "레이드 중 아군이 죽인 시체를 보여 줍니다. 보스는 다른 색입니다."),
+            ["Show Boss Corpses In Raid"] = ("보스 시체 표시", "레이드 중 보스 시체(내가 죽인 것 말고)를 보여 줍니다."),
+            ["Show Other Corpses In Raid"] = ("그 밖의 시체 표시", "레이드 중 아군 것·내가 죽인 것을 뺀 나머지 시체를 보여 줍니다."),
+
+            ["Require a map in your inventory"] = ("지도 아이템 필요", "인벤토리에 지도 아이템이 있어야 레이드 중 지도를 볼 수 있습니다."),
+            ["Intel level required to show PMCs"] = ("PMC 표시 정보 레벨", "정보 센터 레벨이 이 값 이상이면 PMC를 보여 줍니다."),
+            ["Intel level required to show bosses"] = ("보스 표시 정보 레벨", "정보 센터 레벨이 이 값 이상이면 보스를 보여 줍니다."),
+            ["Intel level required to show scavs"] = ("스캐브 표시 정보 레벨", "정보 센터 레벨이 이 값 이상이면 스캐브를 보여 줍니다."),
+            ["Intel level required to show friendly PMCs"] = ("아군 PMC 표시 정보 레벨", "정보 센터 레벨이 이 값 이상이면 아군 PMC를 보여 줍니다."),
+            ["Intel level required to show corpses"] = ("시체 표시 정보 레벨", "정보 센터 레벨이 이 값 이상이면 시체를 보여 줍니다."),
+            ["Intel level required to show airdrops"] = ("보급품 표시 정보 레벨", "정보 센터 레벨이 이 값 이상이면 보급품을 보여 줍니다."),
+            ["Intel level required to show wish listed loot items"] = ("찜한 아이템 표시 정보 레벨", "정보 센터 레벨이 이 값 이상이면 위시리스트 아이템을 보여 줍니다."),
+            ["Intel level required to show hidden stashes"] = ("은닉처 표시 정보 레벨", "정보 센터 레벨이 이 값 이상이면 숨겨진 은닉처를 보여 줍니다."),
+
+            ["Auto Select Level"] = ("층 자동 선택", "레이드 중 내가 있는 층을 자동으로 골라 보여 줍니다."),
+            ["Auto Center On Player Marker"] = ("열 때 내 위치로", "레이드 중 지도를 열면 내 위치를 가운데로 둡니다('지도 위치 기억'과 함께 못 씀)."),
+            ["Reset Zoom On Center"] = ("열 때 확대 초기화", "레이드 중 지도를 열 때마다 확대 수준을 되돌립니다('지도 위치 기억'과 함께 못 씀)."),
+            ["Remember Map Position"] = ("지도 위치 기억", "지도 위치를 기억합니다(이번 레이드 동안만). '열 때 내 위치로', '열 때 확대 초기화'와 함께 못 씀."),
+            ["Centering On Player Zoom Level"] = ("내 위치로 갈 때 확대 수준", "내 위치로 이동할 때 쓸 확대 수준(0 = 가장 멀리, 1 = 가장 가까이)"),
+            ["Main map zoom"] = ("큰 지도 확대 수준", "큰 지도(Tab 화면·잠깐 보기)의 확대 수준(0 = 가장 멀리, 1 = 가장 가까이)"),
+            ["Peek at Map Shortcut"] = ("지도 잠깐 보기 키", "레이드 중 지도를 잠깐 보는 키"),
+            ["Hold for Peek"] = ("누르고 있는 동안만 보기", "켜면 키를 누르고 있는 동안만 지도가 보입니다. 끄면 한 번 누를 때마다 켜고 끕니다."),
+            ["Peek Transition enabled"] = ("잠깐 보기 움직임 효과", "지도가 열리고 닫힐 때 움직이는 효과를 씁니다(끄면 바로 나타남)."),
+
+            ["Mini-map enabled"] = ("미니맵 사용", "미니맵을 켭니다."),
+            ["Mini-map position"] = ("미니맵 위치", "미니맵을 화면 어느 구석에 둘지"),
+            ["Mini-map size horizontal"] = ("미니맵 가로 크기", "미니맵 가로 크기"),
+            ["Mini-map size vertical"] = ("미니맵 세로 크기", "미니맵 세로 크기"),
+            ["Mini-map offset horizontal"] = ("미니맵 가로 여백", "화면 가장자리에서 떨어진 가로 거리(해상도에 맞춰 바뀜, 해상도를 바꿨다면 게임 재시작 필요)"),
+            ["Mini-map offset vertical"] = ("미니맵 세로 여백", "화면 가장자리에서 떨어진 세로 거리(해상도에 맞춰 바뀜, 해상도를 바꿨다면 게임 재시작 필요)"),
+            ["Show or Hide the mini-map"] = ("미니맵 켜기/끄기 키", "미니맵을 보이거나 숨기는 키"),
+            ["Mini map zoom"] = ("미니맵 확대 수준", "미니맵 확대 수준(0 = 가장 멀리, 15 = 가장 가까이)"),
+            ["Zoom in key bind"] = ("미니맵 확대 키", "미니맵을 확대하는 키"),
+            ["Zoom out key bind"] = ("미니맵 축소 키", "미니맵을 축소하는 키"),
+            ["Mini-map update interval"] = ("미니맵 갱신 간격(초)", "미니맵이 내 위치를 따라가는 간격입니다. 낮을수록 부드럽지만 무겁습니다. 기본 0.033초(초당 30번)."),
+
+            ["Your player marker color"] = ("내 마커 색", "마커 색"),
+            ["Bear marker color"] = ("BEAR 마커 색", "마커 색"),
+            ["Usec marker color"] = ("USEC 마커 색", "마커 색"),
+            ["Scav marker color"] = ("스캐브 마커 색", "마커 색"),
+            ["Boss marker color"] = ("보스 마커 색", "마커 색"),
+            ["Airdrop marker color"] = ("보급품 마커 색", "마커 색"),
+            ["Backpack marker color"] = ("배낭 마커 색", "마커 색"),
+            ["Loot marker color"] = ("전리품 마커 색", "마커 색"),
+            ["Killed corpse marker color"] = ("죽인 시체 마커 색", "마커 색"),
+            ["Killed boss corpse marker color"] = ("죽인 보스 시체 마커 색", "마커 색"),
+            ["Killed by other corpse marker color"] = ("남이 죽인 시체 마커 색", "마커 색"),
+            ["BTR marker color"] = ("BTR 마커 색", "마커 색"),
+            ["Extract default marker color"] = ("탈출구 기본 색", "마커 색"),
+            ["Extract open marker color"] = ("탈출구 열림 색", "마커 색"),
+            ["Extract closed marker color"] = ("탈출구 닫힘 색", "마커 색"),
+            ["Extract has requirements marker color"] = ("탈출구 조건 있음 색", "마커 색"),
+            ["Transit point marker color"] = ("이동 지점 마커 색", "마커 색"),
+            ["Secret exfil point marker color"] = ("비밀 탈출구 마커 색", "마커 색"),
+            ["Hidden stash marker color"] = ("은닉처 마커 색", "마커 색"),
+
+            ["Show Heli Crash Marker"] = ("헬기 추락 지점 표시", "레이드 중 헬기 추락 지점을 보여 줍니다(HeliCrash 모드가 있을 때)."),
+        };
+    }
+}

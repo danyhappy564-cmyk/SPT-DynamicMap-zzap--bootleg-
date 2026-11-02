@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
@@ -60,6 +60,12 @@ namespace DynamicMaps.UI.Components
             MapLayerContainer = UIUtils.CreateUIGameObject(gameObject, "Layers");
             MapMarkerContainer = UIUtils.CreateUIGameObject(gameObject, "Markers");
             MapLabelsContainer = UIUtils.CreateUIGameObject(gameObject, "Labels");
+
+            // zzap: markers move every frame; in their own canvas a move only rebatches the markers,
+            // not the tessellated map layers (hundreds of thousands of vertices on some maps)
+            MapMarkerContainer.AddComponent<Canvas>();
+            MapMarkerContainer.AddComponent<GraphicRaycaster>();
+            MapLabelsContainer.AddComponent<Canvas>();
 
             // for some reason these don't follow creation order in some cases
             MapLayerContainer.transform.SetAsFirstSibling();
@@ -295,8 +301,9 @@ namespace DynamicMaps.UI.Components
         public void SelectLevelByCoords(Vector3 coords)
         {
             var matchingLayer = FindMatchingLayerByCoordinate(coords);
-            if (matchingLayer == null)
+            if (matchingLayer == null || matchingLayer.Level == SelectedLevel)
             {
+                // zzap: same level as before, nothing to recolor (the mini-map asks this 30 times a second)
                 return;
             }
 
@@ -394,7 +401,7 @@ namespace DynamicMaps.UI.Components
                     return;
                 
                 ZoomMain = zoomNew;
-                Settings.ZoomMainMap.Value = ActualToNormalized(zoomNew);
+                MarkZoomDirty();
             }
 
             if (updateMiniZoom)
@@ -403,12 +410,42 @@ namespace DynamicMaps.UI.Components
                     return;
                 
                 ZoomMini = zoomNew;
-                Settings.ZoomMiniMap.Value = ActualToNormalized(zoomNew);
+                MarkZoomDirty();
             }
 
             ApplyZoom(ZoomCurrent, tweenTime);
         }
         
+        // zzap: writing a ConfigEntry saves the whole .cfg to disk, so zoom is saved once it settles
+        private bool _zoomDirty;
+        private float _zoomChangedAt;
+
+        private void MarkZoomDirty()
+        {
+            _zoomDirty = true;
+            _zoomChangedAt = Time.unscaledTime;
+        }
+
+        private void Update()
+        {
+            if (_zoomDirty && Time.unscaledTime - _zoomChangedAt > 0.5f)
+            {
+                FlushZoom();
+            }
+        }
+
+        public void FlushZoom()
+        {
+            if (!_zoomDirty)
+            {
+                return;
+            }
+
+            _zoomDirty = false;
+            Settings.ZoomMainMap.Value = ActualToNormalized(ZoomMain);
+            Settings.ZoomMiniMap.Value = ActualToNormalized(ZoomMini);
+        }
+
         public void ApplyMainMapZoom()
         {
             ApplyZoom(ZoomMain, 0f);
@@ -422,13 +459,28 @@ namespace DynamicMaps.UI.Components
         private void ApplyZoom(float zoom, float tweenTime)
         {
             zoom = Mathf.Clamp(zoom, ZoomMin, ZoomMax);
-    
-            RectTransform.DOScale(zoom * Vector3.one, tweenTime);
+
+            var mapScale = zoom * Vector3.one;
+            var childScale = 1 / zoom * Vector3.one;
+
+            // zzap: an instant zoom (every frame while a zoom key is held) sets the scale directly
+            // instead of starting one tween per marker and label
+            if (tweenTime <= 0f)
+            {
+                RectTransform.localScale = mapScale;
+                foreach (var marker in _markers)
+                    marker.GetRectTransform().localScale = childScale;
+                foreach (var label in _labels)
+                    label.GetRectTransform().localScale = childScale;
+                return;
+            }
+
+            RectTransform.DOScale(mapScale, tweenTime);
 
             foreach (var marker in _markers)
-                marker.GetRectTransform().DOScale(1 / zoom * Vector3.one, tweenTime);
+                marker.GetRectTransform().DOScale(childScale, tweenTime);
             foreach (var label in _labels)
-                label.GetRectTransform().DOScale(1 / zoom * Vector3.one, tweenTime);
+                label.GetRectTransform().DOScale(childScale, tweenTime);
         }
         
         private void HandleZoomMainChanged(float normalized)
@@ -504,7 +556,14 @@ namespace DynamicMaps.UI.Components
             {
                 MainMapPos = _immediateMapAnchor;
             }
-            
+
+            // zzap: instant moves (mini-map follows the player 30 times a second) skip the tween allocation
+            if (tweenTime <= 0f && !DOTween.IsTweening(RectTransform, true))
+            {
+                RectTransform.anchoredPosition = _immediateMapAnchor;
+                return;
+            }
+
             RectTransform.DOAnchorPos(_immediateMapAnchor, tweenTime);
         }
 
@@ -540,10 +599,25 @@ namespace DynamicMaps.UI.Components
         private MapLayer FindMatchingLayerByCoordinate(Vector3 coordinate)
         {
             // if multiple matching, use the one with the lowest bound volume
-            // this might be expensive to compute with lots of layers and bounds
-            return _layers.Where(l => l.IsCoordinateInLayer(coordinate))
-                          .OrderBy(l => l.GetMatchingBoundVolume(coordinate))
-                          .FirstOrDefault();
+            // zzap: plain loop, the LINQ version allocated on every marker move
+            MapLayer best = null;
+            var bestVolume = float.MaxValue;
+            foreach (var layer in _layers)
+            {
+                if (!layer.IsCoordinateInLayer(coordinate))
+                {
+                    continue;
+                }
+
+                var volume = layer.GetMatchingBoundVolume(coordinate);
+                if (best == null || volume < bestVolume)
+                {
+                    best = layer;
+                    bestVolume = volume;
+                }
+            }
+
+            return best;
         }
 
         private void UpdateLayerBound(ILayerBound bound)
@@ -557,10 +631,14 @@ namespace DynamicMaps.UI.Components
 
         private void UpdateLayerStatus()
         {
-            var theBound = _markers.Cast<ILayerBound>().Concat(_labels);
-            foreach (var bound in theBound)
+            foreach (var marker in _markers)
             {
-                UpdateLayerBound(bound);
+                UpdateLayerBound(marker);
+            }
+
+            foreach (var label in _labels)
+            {
+                UpdateLayerBound(label);
             }
         }
     }

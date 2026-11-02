@@ -38,14 +38,23 @@ namespace DynamicMaps
                 throw new Exception("Invalid EFT Version");
             }
 
+            Instance = this;
+
             ExternalModSupport.ModDetection.CheckforMods();
 
             Settings.Init(Config);
-            Config.SettingChanged += (x, y) => Map?.ReadConfig();
+            Config.SettingChanged += (x, y) =>
+            {
+                // zzap: zoom values change every frame while zooming, they don't need a full config re-read
+                if (y.ChangedSetting == Settings.ZoomMainMap || y.ChangedSetting == Settings.ZoomMiniMap)
+                {
+                    return;
+                }
+
+                Map?.ReadConfig();
+            };
 
             // Logger.LogWarning("TEST BUILD OF DYNAMIC MAPS, NO SUPPORT OFFERED.");
-            
-            Instance = this;
 
             // patches
             new BattleUIScreenShowPatch().Enable();

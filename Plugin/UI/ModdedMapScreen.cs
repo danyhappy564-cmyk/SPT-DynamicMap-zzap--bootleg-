@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using BepInEx.Configuration;
@@ -81,7 +81,7 @@ namespace DynamicMaps.UI
         private readonly Dictionary<Type, IDynamicMarkerProvider> _dynamicMarkerProviders = [];
         
         // minimap throttle
-        private readonly float _miniMapUpdateInterval = 0.033f;
+        private float _miniMapUpdateInterval = 0.033f;
         private float _miniMapUpdateTimer = 0f;
 
         // config
@@ -336,6 +336,7 @@ namespace DynamicMaps.UI
             }
             
             Hide();
+            _mapView.FlushZoom();
             IsShowingMapScreen = false;
             
             if (_peekComponent is not null && _peekComponent.WasMiniMapActive)
@@ -929,6 +930,7 @@ namespace DynamicMaps.UI
             _centeringZoomResetPoint = Settings.CenteringZoomResetPoint.Value;
 
             _transitionAnimations = Settings.MapTransitionEnabled.Value;
+            _miniMapUpdateInterval = Settings.MiniMapUpdateInterval.Value;
             
             if (_peekComponent is not null)
             {

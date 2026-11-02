@@ -124,9 +124,10 @@
     </ItemGroup>
 
     <!-- Copies the output and resources to tarkov game folder -->
-    <Copy SourceFiles="@(OutputDLL);@(Resources);@(License)" DestinationFolder="$(TarkovDir)BepInEx\plugins\mpstark-dynamicmaps\%(RecursiveDir)" />
-    <Copy SourceFiles="@(ManagedDlls)" DestinationFolder="$(TarkovDir)\%(RecursiveDir)" />
-    <Copy SourceFiles="@(ServerComponents)" DestinationFolder="$(TarkovDir)SPT_Runtime\user\mods\mpstark-dynamicmaps\%(RecursiveDir)" />
+    <!-- zzap: -p:SkipDeploy=true builds without touching the game folder -->
+    <Copy Condition=" '$(SkipDeploy)' != 'true' " SourceFiles="@(OutputDLL);@(Resources);@(License)" DestinationFolder="$(TarkovDir)BepInEx\plugins\mpstark-dynamicmaps\%(RecursiveDir)" />
+    <Copy Condition=" '$(SkipDeploy)' != 'true' " SourceFiles="@(ManagedDlls)" DestinationFolder="$(TarkovDir)\%(RecursiveDir)" />
+    <Copy Condition=" '$(SkipDeploy)' != 'true' " SourceFiles="@(ServerComponents)" DestinationFolder="$(TarkovDir)SPT_Runtime\user\mods\mpstark-dynamicmaps\%(RecursiveDir)" />
 
     <!-- Creates a release zip file -->
     <RemoveDir Directories="$(ProjectDir)release" />

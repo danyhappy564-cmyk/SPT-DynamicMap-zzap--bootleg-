@@ -12,6 +12,13 @@ namespace DynamicMaps.Config
     {
         private static readonly List<ConfigEntryBase> ConfigEntries = [];
 
+        #region Language
+
+        private const string LanguageTitle = "0. Language";
+        public static ConfigEntry<ELanguage> Language;
+
+        #endregion
+
         #region General
 
         private const string GeneralTitle = "1. General";
@@ -102,6 +109,7 @@ namespace DynamicMaps.Config
         public static ConfigEntry<float> ZoomMiniMap;
         public static ConfigEntry<KeyboardShortcut> ZoomInMiniMapHotkey;
         public static ConfigEntry<KeyboardShortcut> ZoomOutMiniMapHotkey;
+        public static ConfigEntry<float> MiniMapUpdateInterval;
         
         #endregion
 
@@ -141,6 +149,26 @@ namespace DynamicMaps.Config
 
         public static void Init(ConfigFile config)
         {
+            #region Language
+
+            ConfigEntries.Add(Language = config.Bind(
+                LanguageTitle,
+                "Language",
+                ELanguage.Auto,
+                new ConfigDescription(
+                    "Language of the F12 settings and the map texts. Auto follows the Windows display language",
+                    null,
+                    new ConfigurationManagerAttributes { })));
+
+            Lang.Init(Language.Value);
+            Language.SettingChanged += (_, _) =>
+            {
+                Lang.Set(Language.Value);
+                ApplyLanguage();
+            };
+
+            #endregion
+
             #region General
 
             ConfigEntries.Add(ReplaceMapScreen = config.Bind(
@@ -731,6 +759,15 @@ namespace DynamicMaps.Config
                     "Zoom out on mini map key bind",
                     null,
                     new ConfigurationManagerAttributes { })));
+
+            ConfigEntries.Add(MiniMapUpdateInterval = config.Bind(
+                MiniMapTitle,
+                "Mini-map update interval",
+                0.033f,
+                new ConfigDescription(
+                    "Seconds between mini-map position updates. Lower is smoother but costs more. Default 0.033 (30 per second)",
+                    new AcceptableValueRange<float>(0.01f, 0.2f),
+                    new ConfigurationManagerAttributes { })));
             
             ZoomMiniMap.SettingChanged += ZoomMiniMapChanged;
             
@@ -927,6 +964,40 @@ namespace DynamicMaps.Config
             #endregion
             
             RecalcOrder();
+            ApplyLanguage();
+        }
+
+        // zzap: section, key and value stay English in the .cfg, only what F12 shows changes
+        private static void ApplyLanguage()
+        {
+            foreach (var entry in ConfigEntries)
+            {
+                if (entry.Description.Tags.Length == 0
+                    || entry.Description.Tags[0] is not ConfigurationManagerAttributes attributes)
+                {
+                    continue;
+                }
+
+                attributes.DispName = null;
+                attributes.Description = null;
+                attributes.Category = null;
+
+                if (!Lang.IsKorean)
+                {
+                    continue;
+                }
+
+                if (SettingsKo.Entries.TryGetValue(entry.Definition.Key, out var ko))
+                {
+                    attributes.DispName = ko.Name;
+                    attributes.Description = ko.Description;
+                }
+
+                if (SettingsKo.Sections.TryGetValue(entry.Definition.Section, out var section))
+                {
+                    attributes.Category = section;
+                }
+            }
         }
         
         private static void RecalcOrder()
