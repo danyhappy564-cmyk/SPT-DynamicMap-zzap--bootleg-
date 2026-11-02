@@ -73,7 +73,7 @@ public class HiddenStashMarkerProvider : IDynamicMarkerProvider
             Color = Settings.HiddenStashColor.Value,
             ImagePath = _hiddenCacheImagePath,
             Position = MathUtils.ConvertToMapPosition(stash.transform),
-            Text = "Hidden Stash"
+            Text = Lang.T("Hidden Stash", "숨겨진 은닉처")
         };
 
         var marker = _lastMapView.AddMapMarker(markerDef);

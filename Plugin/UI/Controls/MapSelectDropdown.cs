@@ -1,8 +1,9 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using DynamicMaps.Data;
+using DynamicMaps.ExternalModSupport;
 using DynamicMaps.Utils;
 using EFT.UI;
 using UnityEngine;
@@ -38,7 +39,7 @@ namespace DynamicMaps.UI.Controls
         private void Awake()
         {
             _dropdown = gameObject.GetComponentInChildren<DropDownBox>();
-            _dropdown.SetLabelText("Select a Map");
+            _dropdown.SetLabelText(Lang.T("Select a Map", "지도 선택"));
         }
 
         private void OnSelectDropdownMap(int index)
@@ -56,7 +57,7 @@ namespace DynamicMaps.UI.Controls
 
             _selectableMapDefs = mapDefs.ToList();
 
-            _dropdown.Show(_selectableMapDefs.Select(def => def.DisplayName));
+            _dropdown.Show(_selectableMapDefs.Select(def => def.LocalizedName));
 
             // TODO: this references a BSG method of GInterface390
             _dropdown.OnValueChanged.Subscribe(OnSelectDropdownMap);
@@ -96,15 +97,37 @@ namespace DynamicMaps.UI.Controls
 
         private IEnumerable<MapDef> FilteredMapDefs()
         {
-            return _mapDefs.Values.Where(m =>
-                {
-                    if (string.IsNullOrEmpty(_nameFilter))
-                    {
-                        return true;
-                    }
+            if (string.IsNullOrEmpty(_nameFilter))
+            {
+                return _mapDefs.Values.OrderBy(m => m.LocalizedName);
+            }
 
-                    return m.MapInternalNames.Contains(_nameFilter);
-                }).OrderBy(m => m.DisplayName);
+            // zzap: with a map swapped by MapVariants / a backport mod, show the pack made for this raid's version
+            var byName = _mapDefs.Values.Where(m => m.MapInternalNames.Contains(_nameFilter)).ToList();
+            var variant = MapVariantsSupport.GetVariant(_nameFilter);
+            var byVariant = byName.Where(m => MapVariantsSupport.Matches(m.Variant, variant)).ToList();
+            var candidates = byVariant.Count > 0 ? byVariant : byName;
+
+            return candidates
+                .OrderBy(m => VariantRank(m.Variant, variant))
+                .ThenBy(m => m.LocalizedName);
+        }
+
+        // exact version first, then packs for any version; with the version unknown, the original map first
+        private static int VariantRank(string packVariant, string raidVariant)
+        {
+            if (raidVariant != null && string.Equals(packVariant, raidVariant, StringComparison.OrdinalIgnoreCase))
+            {
+                return 0;
+            }
+
+            if (string.IsNullOrEmpty(packVariant)
+                || string.Equals(packVariant, MapVariantsSupport.Original, StringComparison.OrdinalIgnoreCase))
+            {
+                return raidVariant == null ? 0 : 1;
+            }
+
+            return 2;
         }
 
         public IEnumerable<MapDef> GetMapDefs()

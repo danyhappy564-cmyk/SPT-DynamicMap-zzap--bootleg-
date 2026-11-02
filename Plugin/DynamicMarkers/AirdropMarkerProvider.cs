@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using DynamicMaps.Config;
 using DynamicMaps.Data;
@@ -97,7 +97,7 @@ namespace DynamicMaps.DynamicMarkers
                 ImagePath = _airdropImagePath,
                 Position = MathUtils.ConvertToMapPosition(airdrop.transform),
                 Pivot = _airdropPivot,
-                Text = _airdropName
+                Text = Lang.T(_airdropName, "보급품")
             };
 
             var marker = _lastMapView.AddMapMarker(markerDef);

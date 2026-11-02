@@ -1,6 +1,7 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using DynamicMaps.Utils;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -87,6 +88,12 @@ namespace DynamicMaps.Data
 
         public string Author { get; set; }
         public string AuthorLink { get; set; }
+
+        // zzap: "original" or "backport" for maps that MapVariants or a backport mod swaps; empty = any version
+        public string Variant { get; set; }
+
+        [JsonIgnore]
+        public string LocalizedName => Lang.Map(DisplayName);
 
         public static MapDef LoadFromPath(string absolutePath)
         {

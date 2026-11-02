@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using DynamicMaps.Data;
@@ -42,7 +42,7 @@ namespace DynamicMaps.UI.Controls
                     _scrollbar.value = _levels.IndexOf(value) / (_levels.Count - 1f);
                 }
 
-                _text.text = $"Level {value}";
+                _text.text = LevelName(value);
                 _selectedLevel = value;
             }
         }
@@ -147,9 +147,31 @@ namespace DynamicMaps.UI.Controls
             OnLevelSelectedBySlider?.Invoke(_levels[newIndex]);
         }
 
+        // zzap: show the layer name ("Ground Floor" / "1층") instead of "Level 0"
+        private readonly Dictionary<int, string> _levelNames = new Dictionary<int, string>();
+
+        private string LevelName(int level)
+        {
+            if (_levelNames.TryGetValue(level, out var name))
+            {
+                return Lang.Map(name);
+            }
+
+            return Lang.T($"Level {level}", $"{level}층");
+        }
+
         public void OnLoadMap(MapDef mapDef, int initialLevel)
         {
             _levels.Clear();
+            _levelNames.Clear();
+            foreach (var pair in mapDef.Layers)
+            {
+                // several layers can share a level, the first one names it
+                if (!_levelNames.ContainsKey(pair.Value.Level))
+                {
+                    _levelNames[pair.Value.Level] = pair.Key;
+                }
+            }
             _selectedLevel = int.MinValue;
 
             // extract the unique levels from mapDef layers

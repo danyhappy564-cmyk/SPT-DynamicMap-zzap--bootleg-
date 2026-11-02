@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using DynamicMaps.Data;
 using DynamicMaps.Utils;
@@ -175,7 +175,7 @@ namespace DynamicMaps.UI.Components
 
         public static MapMarker Create(GameObject parent, MapMarkerDef def, Vector2 size, float degreesRotation, float scale)
         {
-            var mapMarker = Create<MapMarker>(parent, def.Text, def.Category, def.ImagePath, def.Color, def.Position, size,
+            var mapMarker = Create<MapMarker>(parent, Lang.Map(def.Text), def.Category, def.ImagePath, def.Color, def.Position, size,
                                               def.Pivot, degreesRotation, scale, def.ShowInRaid, def.Sprite);
             mapMarker.AssociatedItemId = def.AssociatedItemId;
 

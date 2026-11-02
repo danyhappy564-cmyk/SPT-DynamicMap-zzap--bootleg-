@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using DynamicMaps.Data;
 using DynamicMaps.Utils;
 using TMPro;
@@ -63,7 +63,7 @@ namespace DynamicMaps.UI.Components
             rectTransform.localRotation = Quaternion.Euler(0, 0, degreesRotation - def.DegreesRotation);
 
             var label = go.AddComponent<MapLabel>();
-            label.Text = def.Text;
+            label.Text = Lang.Map(def.Text);
             label.Category = def.Category;
             label.Position = def.Position;
 
