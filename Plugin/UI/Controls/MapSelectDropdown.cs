@@ -22,6 +22,7 @@ namespace DynamicMaps.UI.Controls
         private readonly Dictionary<string, MapDef> _mapDefs = new Dictionary<string, MapDef>();
         private List<MapDef> _selectableMapDefs;
         private bool _listKorean;
+        private Action _unsubscribeValueChanged;
         private string _nameFilter = null;
 
         public static MapSelectDropdown Create(GameObject prefab, Transform parent)
@@ -41,6 +42,12 @@ namespace DynamicMaps.UI.Controls
         {
             _dropdown = gameObject.GetComponentInChildren<DropDownBox>();
             _dropdown.SetLabelText(Lang.T("Select a Map", "지도 선택"));
+        }
+
+        private void OnDestroy()
+        {
+            _unsubscribeValueChanged?.Invoke();
+            _unsubscribeValueChanged = null;
         }
 
         private void OnSelectDropdownMap(int index)
@@ -64,7 +71,11 @@ namespace DynamicMaps.UI.Controls
             _dropdown.Show(_selectableMapDefs.Select(def => def.LocalizedName));
 
             // TODO: this references a BSG method of GInterface390
-            _dropdown.OnValueChanged.Subscribe(OnSelectDropdownMap);
+            // zzap: Show() keeps the old subscriptions, subscribe once or every list rebuild adds another callback
+            if (_unsubscribeValueChanged == null)
+            {
+                _unsubscribeValueChanged = _dropdown.OnValueChanged.Subscribe(OnSelectDropdownMap);
+            }
 
             gameObject.SetActive(_selectableMapDefs.Count > 1);
         }
