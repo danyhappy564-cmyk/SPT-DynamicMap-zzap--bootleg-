@@ -3,6 +3,7 @@
   "Author": "Tarkov.dev",
   "AuthorLink": "https://tarkov.dev",
   "MapInternalNames": [ "Interchange" ],
+  "Variant": "original",
   "CoordinateRotation": 180,
   "Bounds": {
     "Min": {"x": -364, "y": -443},

@@ -3,6 +3,7 @@
   "Author": "Tarkov.dev",
   "AuthorLink": "https://tarkov.dev",
   "MapInternalNames": [ "factory4_day", "factory4_night" ],
+  "Variant": "original",
   "CoordinateRotation": 90,
   "Bounds": {
     "Min": {"x": -65, "y": -64.5},

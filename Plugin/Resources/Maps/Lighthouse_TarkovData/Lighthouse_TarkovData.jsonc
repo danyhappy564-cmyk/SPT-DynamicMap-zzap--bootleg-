@@ -3,6 +3,7 @@
   "Author": "Shebuka",
   "AuthorLink": "https://github.com/TarkovTracker/tarkovdata/",
   "MapInternalNames": [ "Lighthouse" ],
+  "Variant": "original",
   "CoordinateRotation": 180,
   "Bounds": {
     "Min": {"x": -545, "y": -998},
