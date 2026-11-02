@@ -18,7 +18,6 @@
     }
   },
   "DefaultLevel": 0,
-  "ShowOtherLevels": true,
   "Layers": {
     "Ground Floor": {
       "Level": 0,

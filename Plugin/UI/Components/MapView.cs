@@ -246,14 +246,7 @@ namespace DynamicMaps.UI.Components
             // load all static map markers
             foreach (var markerDef in mapDef.StaticMarkers)
             {
-                var marker = AddMapMarker(markerDef);
-
-                if (mapDef.ShowOtherLevels && (marker.Category == "LockedDoor" || marker.Category == "Switch"))
-                {
-                    marker.ImageAlphaLayerStatus[LayerStatus.Hidden] = 0.3f;
-                    marker.ImageAlphaLayerStatus[LayerStatus.Underneath] = 0.5f;
-                    UpdateLayerBound(marker);
-                }
+                AddMapMarker(markerDef);
             }
 
             // load all static labels

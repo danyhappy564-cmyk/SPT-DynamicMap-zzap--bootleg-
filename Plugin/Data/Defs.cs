@@ -90,10 +90,6 @@ namespace DynamicMaps.Data
         // zzap: how much closer than "whole map fits" the map opens, for maps whose play area is a small part of the image
         public float OpenZoom { get; set; } = 1f;
 
-        // zzap: doors and switches on other floors stay faintly visible (names still only on hover, like the
-        // original packs), for packs with many floors (Icebreaker decks, the Interchange mall)
-        public bool ShowOtherLevels { get; set; } = false;
-
         public string Author { get; set; }
         public string AuthorLink { get; set; }
 

@@ -10,7 +10,6 @@
     "Max": {"x": -96, "y": -223}
   },
   "DefaultLevel": 0,
-  "ShowOtherLevels": true,
   "Layers": {
     "Technical": {
       "Level": -1,
