@@ -44,3 +44,28 @@ SPT 4.1용 DynamicMaps(게임 지도 화면을 쓸 만한 지도로 바꾸는 �
 - 마커 아이콘: [`marker_credits.txt`](Plugin/Resources/Markers/marker_credits.txt) (BTR 아이콘 Kuromi).
 - 이 판에서 새로 만든 지도 그림(터미널·인터체인지 리워크·등대 리워크)은 설치된 게임 지형에서 직접 만든 것으로 CC BY-NC-SA 4.0 — 각 폴더의 `zzap-LICENSE.md`. 게임 자산의 권리는 원권리자에게 있습니다.
 - 연구소 리워크는 원본 Labs 그림(Shebuka)의 2층만 고친 것으로 원본과 같은 CC BY-NC-SA 4.0. 공장 클래식은 원본 DynamicMaps의 공장 그림을 그대로 씁니다(원래 라이선스 그대로).
+
+---
+
+## English
+
+An edited build of DynamicMaps for SPT 4.1 (the mod that turns the in-game map screen into a usable map).
+
+- **New maps**: Terminal, Interchange rework, Lighthouse rework, Labs rework (office above the boiler room), Factory Classic, and Icebreaker. Labels, extracts, transits, locked doors and switches included.
+- **Icebreaker**: shipped in the release zip only, not in this repository (map art by 파인애플애호가).
+- **Original/rework map picked automatically**: when MapVariants or a Manimal backport runs the rework map for a raid, the rework map is shown; otherwise the original.
+- **Korean**: F12 settings and map texts. F12 "Language" = Auto (follows the game language) / Korean / English.
+- **Less minimap stutter**: no recalculation on the same floor, zoom saved once after you stop, markers drawn apart from the map image. New F12 minimap update interval.
+
+### Install
+
+- Extract `DynamicMaps-zzap--bootleg--v1.zip` from the release into your SPT folder and overwrite. Settings are kept.
+- **Do not install together with DynamicMaps-Extended** (another edit of the same mod; they conflict).
+
+### Credits / License
+
+- Plugin code: [SPT-DynamicMaps](https://github.com/mpstark/SPT-DynamicMaps) by Michael P. Starkweather (mpstark), MIT ©2024 — [`Plugin/LICENSE`](Plugin/LICENSE). 1.2.x maintained by acidphantasm. Changes in this build are MIT as well.
+- Original maps and data: TarkovData (TarkovTracker), TarkovDev (MIT ©2019 Oskar Risberg), Shebuka map art (CC BY-NC-SA 4.0) — [`map_and_data_credits.txt`](Plugin/Resources/Maps/map_and_data_credits.txt) and the LICENSE in each map folder.
+- Marker icons: [`marker_credits.txt`](Plugin/Resources/Markers/marker_credits.txt) (BTR icon by Kuromi).
+- New map art made for this build (Terminal, Interchange rework, Lighthouse rework) was drawn from the installed game's terrain, CC BY-NC-SA 4.0 — `zzap-LICENSE.md` in each folder. Game assets belong to their owners.
+- Labs rework edits only the second floor of the original Shebuka Labs art, same CC BY-NC-SA 4.0. Factory Classic uses the original DynamicMaps Factory art as is (original license).
