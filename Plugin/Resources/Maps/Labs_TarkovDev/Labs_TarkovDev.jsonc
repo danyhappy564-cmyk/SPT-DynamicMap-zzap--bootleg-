@@ -3,6 +3,7 @@
   "Author": "Tarkov.dev",
   "AuthorLink": "https://tarkov.dev",
   "MapInternalNames": [ "laboratory" ],
+  "Variant": "original",
   "CoordinateRotation": 270,
   "Bounds": {
     "Min": {"x": -292, "y": -441},

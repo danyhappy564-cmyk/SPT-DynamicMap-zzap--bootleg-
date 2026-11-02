@@ -92,6 +92,9 @@ namespace DynamicMaps.ExternalModSupport
                     return Chainloader.PluginInfos.ContainsKey("com.manimal.interchange") ? Backport : Original;
                 case "lighthouse":
                     return Chainloader.PluginInfos.ContainsKey("com.manimal.lighthouse") ? Backport : Original;
+                case "laboratory":
+                    // ManimalLabs only swaps the office above the boiler room for its 1.0 version
+                    return Chainloader.PluginInfos.ContainsKey("com.manimal.labsboiler") ? Backport : Original;
                 default:
                     return null;
             }
