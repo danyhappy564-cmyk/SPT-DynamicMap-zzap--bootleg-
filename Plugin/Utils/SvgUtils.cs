@@ -80,7 +80,7 @@ public static class SvgUtils
         foreach (var g in geometry)
         {
             verts += g.Vertices?.Length ?? 0;
-            if (verts > 65500) return true;
+            if (verts > 65000) return true; // zzap: Unity's mesh limit is 65000, 65500 slipped through and broke the map
         }
 
         return false;

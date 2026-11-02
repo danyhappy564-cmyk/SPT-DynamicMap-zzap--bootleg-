@@ -30,6 +30,7 @@ namespace DynamicMaps.UI
         private const string MapRelPath = "Maps";
 
         private bool _initialized = false;
+        private bool _loadedKorean;
         
         // zoom stuff
         private static readonly float PositionTweenTime = 0.25f;
@@ -360,6 +361,13 @@ namespace DynamicMaps.UI
 
             // populate map select dropdown
             _mapSelectDropdown.LoadMapDefsFromPath(MapRelPath);
+
+            // zzap: Auto follows the game language and F12 can switch it; labels are made on load, so reload on a change
+            Lang.Refresh();
+            if (_mapView.CurrentMapDef != null && _loadedKorean != Lang.IsKorean)
+            {
+                ChangeMap(_mapView.CurrentMapDef);
+            }
 
             if (GameUtils.IsInRaid())
             {
@@ -1100,11 +1108,12 @@ namespace DynamicMaps.UI
 
         private void ChangeMap(MapDef mapDef)
         {
-            if (mapDef == null || _mapView.CurrentMapDef == mapDef)
+            if (mapDef == null || (_mapView.CurrentMapDef == mapDef && _loadedKorean == Lang.IsKorean))
             {
                 return;
             }
 
+            _loadedKorean = Lang.IsKorean;
             Plugin.Log.LogInfo($"MapScreen: Loading map {mapDef.DisplayName}");
 
             // Reset size and position when loading map and in raid

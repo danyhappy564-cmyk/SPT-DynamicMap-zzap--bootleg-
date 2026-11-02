@@ -156,7 +156,7 @@ namespace DynamicMaps.Config
                 "Language",
                 ELanguage.Auto,
                 new ConfigDescription(
-                    "Language of the F12 settings and the map texts. Auto follows the Windows display language",
+                    "Language of the F12 settings and the map texts. Auto follows the game language",
                     null,
                     new ConfigurationManagerAttributes { })));
 

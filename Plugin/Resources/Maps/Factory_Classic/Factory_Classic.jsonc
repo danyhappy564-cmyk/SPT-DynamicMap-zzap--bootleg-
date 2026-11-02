@@ -19,6 +19,7 @@
     }
   },
   "DefaultLevel": 0,
+  "ShowOtherLevels": true,
   "Layers": {
     "Tunnels": {
       "Level": -1,

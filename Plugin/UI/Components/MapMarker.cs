@@ -131,9 +131,10 @@ namespace DynamicMaps.UI.Components
 
             set
             {
+                // zzap: keep the alpha the layer status set, recoloring (key found / missing) made faded markers solid
                 _color = value;
-                Image.color = value;
-                Label.color = value;
+                Image.color = new Color(value.r, value.g, value.b, Image.color.a);
+                Label.color = new Color(value.r, value.g, value.b, Label.color.a);
             }
         }
 
@@ -241,6 +242,8 @@ namespace DynamicMaps.UI.Components
 
             marker._hasSetOutline = UIUtils.TrySetTMPOutline(marker.Label);
 
+            marker.Image.color = color;
+            marker.Label.color = color;
             marker.Color = color;
             marker._size = size;
 

@@ -227,6 +227,13 @@ namespace DynamicMaps.UI.Components
                 var layerName = pair.Key;
                 var layerDef = pair.Value;
                 var layer = MapLayer.Create(MapLayerContainer, layerName, layerDef, -CoordinateRotation);
+                if (layer == null)
+                {
+                    // zzap: an image too detailed for Unity used to stop the whole map here, skip just that layer
+                    Plugin.Log.LogError($"Map {mapDef.DisplayName}: layer {layerName} image could not be built, skipped");
+                    continue;
+                }
+
                 layer.IsOnDefaultLevel = layerDef.Level == mapDef.DefaultLevel;
 
                 _layers.Add(layer);
@@ -238,7 +245,14 @@ namespace DynamicMaps.UI.Components
             // load all static map markers
             foreach (var markerDef in mapDef.StaticMarkers)
             {
-                AddMapMarker(markerDef);
+                var marker = AddMapMarker(markerDef);
+
+                if (mapDef.ShowOtherLevels && (marker.Category == "LockedDoor" || marker.Category == "Switch"))
+                {
+                    marker.ImageAlphaLayerStatus[LayerStatus.Hidden] = 0.3f;
+                    marker.ImageAlphaLayerStatus[LayerStatus.Underneath] = 0.5f;
+                    UpdateLayerBound(marker);
+                }
             }
 
             // load all static labels

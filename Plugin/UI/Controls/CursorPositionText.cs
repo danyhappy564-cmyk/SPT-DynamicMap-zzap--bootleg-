@@ -1,3 +1,4 @@
+using DynamicMaps.Utils;
 using UnityEngine;
 
 namespace DynamicMaps.UI.Controls
@@ -18,7 +19,7 @@ namespace DynamicMaps.UI.Controls
         {
             RectTransformUtility.ScreenPointToLocalPointInRectangle(
                 _mapViewTransform, Input.mousePosition, null, out Vector2 mouseRelative);
-            Text.text = $"Cursor: {mouseRelative.x:F} {mouseRelative.y:F}";
+            Text.text = $"{Lang.T("Cursor", "커서")}: {mouseRelative.x:F} {mouseRelative.y:F}";
         }
     }
 }

@@ -18,6 +18,7 @@
     }
   },
   "DefaultLevel": 0,
+  "ShowOtherLevels": true,
   "Layers": {
     "Ground": {
       "Level": 0,

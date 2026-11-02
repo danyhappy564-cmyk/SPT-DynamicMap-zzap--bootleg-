@@ -21,7 +21,7 @@ namespace DynamicMaps.UI.Controls
             }
 
             var mapPosition = MathUtils.ConvertToMapPosition(((IPlayer)player).Position);
-            Text.text = $"Player: {mapPosition.x:F} {mapPosition.y:F} {mapPosition.z:F}";
+            Text.text = $"{Lang.T("Player", "플레이어")}: {mapPosition.x:F} {mapPosition.y:F} {mapPosition.z:F}";
         }
     }
 }

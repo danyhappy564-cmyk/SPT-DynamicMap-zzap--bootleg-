@@ -19,7 +19,7 @@ namespace DynamicMaps.Config
 
         public static readonly Dictionary<string, (string Name, string Description)> Entries = new Dictionary<string, (string, string)>
         {
-            ["Language"] = ("언어", "F12 설정과 지도 글자의 언어입니다. 자동은 윈도우 표시 언어를 따릅니다(한국어 윈도우면 한국어)."),
+            ["Language"] = ("언어", "F12 설정과 지도 글자의 언어입니다. 자동은 게임 언어 설정을 따릅니다(게임이 한국어면 한국어, 영어면 영어)."),
 
             ["Replace Map Screen"] = ("기본 지도 화면 바꾸기", "게임 기본 지도 화면을 이 모드 지도로 바꿉니다. 바꾼 뒤에는 다른 화면에 갔다 와야 적용됩니다."),
             ["Center on Player Hotkey"] = ("내 위치로 이동 키", "지도가 열려 있을 때 누르면 내 위치를 가운데로 옮깁니다."),
