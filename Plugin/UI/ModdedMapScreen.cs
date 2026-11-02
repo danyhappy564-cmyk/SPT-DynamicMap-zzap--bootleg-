@@ -642,7 +642,7 @@ namespace DynamicMaps.UI
             if (!_rememberMapPosition && !_autoCenterOnPlayerMarker && !ShowingMiniMap)
             {
                 _mapView.ApplyMainMapZoom();
-                _mapView.SetMapZoom(_mapView.ZoomMin, 0f);
+                _mapView.SetMapZoom(_mapView.ZoomOpen, 0f);
                 return;
             }
             

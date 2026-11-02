@@ -86,6 +86,9 @@ namespace DynamicMaps.Data
         public List<MapMarkerDef> StaticMarkers { get; set; } = new List<MapMarkerDef>();
         public int DefaultLevel { get; set; } = 0;
 
+        // zzap: how much closer than "whole map fits" the map opens, for maps whose play area is a small part of the image
+        public float OpenZoom { get; set; } = 1f;
+
         public string Author { get; set; }
         public string AuthorLink { get; set; }
 

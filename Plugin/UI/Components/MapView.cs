@@ -31,6 +31,7 @@ namespace DynamicMaps.UI.Components
 
         // Zoom holders
         public float ZoomMin { get; private set; }      // set when map loaded
+        public float ZoomOpen => Mathf.Clamp(ZoomMin * (CurrentMapDef?.OpenZoom ?? 1f), ZoomMin, ZoomMax);
         public float ZoomMax { get; private set; }      // set when map loaded
         public float ZoomMain { get; private set; }
         public float ZoomMini { get; private set; }
@@ -378,7 +379,7 @@ namespace DynamicMaps.UI.Components
             ZoomMax = _zoomMaxScaler * ZoomMin;
 
             // this will set everything up for initial zoom - mini comes from the settings on load, main needs to be minimum so the user can change it
-            ZoomMain = ZoomMin;
+            ZoomMain = ZoomOpen;
             ZoomMini = NormalizedToActual(Settings.ZoomMiniMap.Value);
             
             ApplyZoom(ZoomCurrent, 0f);
