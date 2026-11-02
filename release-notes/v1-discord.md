@@ -1,4 +1,4 @@
-## DynamicMaps-zzap--bootleg- 1
+## DynamicMaps-zzap--bootleg- v1
 
 **- 새 지도 5종(+쇄빙선 애드온), 한국어 지도, 미니맵 끊김 줄이기**
 

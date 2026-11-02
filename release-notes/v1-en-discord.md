@@ -1,4 +1,4 @@
-## DynamicMaps-zzap--bootleg- 1
+## DynamicMaps-zzap--bootleg- v1
 
 **- 5 new maps (+ Icebreaker add-on), Korean map texts, less minimap stutter**
 
