@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using System.Runtime.InteropServices;
 using Newtonsoft.Json;
 
 namespace DynamicMaps.Utils
@@ -28,6 +29,7 @@ namespace DynamicMaps.Utils
         {
             Set(language);
             LoadMapTexts();
+            Plugin.Log.LogInfo($"Language {language}: {(IsKorean ? "Korean" : "English")}, {_mapTextKo.Count} map texts");
         }
 
         public static void Set(ELanguage language)
@@ -60,8 +62,30 @@ namespace DynamicMaps.Utils
             return _mapTextKo.TryGetValue(english, out var korean) ? korean : english;
         }
 
+        // Korean primary language id (LANGID & 0x3FF)
+        private const int LangKorean = 0x12;
+
+        [DllImport("kernel32.dll")]
+        private static extern ushort GetUserDefaultUILanguage();
+
+        [DllImport("kernel32.dll")]
+        private static extern ushort GetUserDefaultLangID();
+
         private static bool IsWindowsKorean()
         {
+            // Unity's Mono reports the invariant culture even on Korean Windows, so ask Windows directly
+            try
+            {
+                if ((GetUserDefaultUILanguage() & 0x3FF) == LangKorean || (GetUserDefaultLangID() & 0x3FF) == LangKorean)
+                {
+                    return true;
+                }
+            }
+            catch (Exception e)
+            {
+                Plugin.Log.LogWarning($"Reading the Windows language failed: {e.Message}");
+            }
+
             try
             {
                 return CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "ko"
