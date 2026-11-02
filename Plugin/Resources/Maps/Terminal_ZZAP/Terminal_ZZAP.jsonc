@@ -280,5 +280,187 @@
       "FontSize": 12
     }
   ],
-  "StaticMarkers": []
+  "StaticMarkers": [
+    {
+      "Text": "Pier Door",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": -258.761,
+        "y": 340.883,
+        "z": -59.249
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "6866adbe09b973bf45094339"
+    },
+    {
+      "Text": "Armory",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": 190.841,
+        "y": -241.636,
+        "z": -59.28
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "68a4b745b63e97cc5a056a07"
+    },
+    {
+      "Text": "Water Station Pump",
+      "ImagePath": "Markers/lever.png",
+      "Position": {
+        "x": 176.264,
+        "y": 258.228,
+        "z": -59.08
+      },
+      "Category": "Switch"
+    },
+    {
+      "Text": "Power Box",
+      "ImagePath": "Markers/lever.png",
+      "Position": {
+        "x": 178.904,
+        "y": 256.45,
+        "z": -60.5
+      },
+      "Category": "Switch"
+    },
+    {
+      "Text": "Power Box",
+      "ImagePath": "Markers/lever.png",
+      "Position": {
+        "x": 176.222,
+        "y": -39.15,
+        "z": -60.484
+      },
+      "Category": "Switch"
+    },
+    {
+      "Text": "Power Box",
+      "ImagePath": "Markers/lever.png",
+      "Position": {
+        "x": 162.915,
+        "y": 14.167,
+        "z": -60.421
+      },
+      "Category": "Switch"
+    },
+    {
+      "Text": "Gate Switchboard",
+      "ImagePath": "Markers/lever.png",
+      "Position": {
+        "x": 122.312,
+        "y": 9.006,
+        "z": -58.902
+      },
+      "Category": "Switch"
+    },
+    {
+      "Text": "Power Box",
+      "ImagePath": "Markers/lever.png",
+      "Position": {
+        "x": 103.397,
+        "y": -242.224,
+        "z": -60.5
+      },
+      "Category": "Switch"
+    },
+    {
+      "Text": "Power Box",
+      "ImagePath": "Markers/lever.png",
+      "Position": {
+        "x": 66.353,
+        "y": -182.906,
+        "z": -60.39
+      },
+      "Category": "Switch"
+    },
+    {
+      "Text": "Gate Detonator",
+      "ImagePath": "Markers/lever.png",
+      "Position": {
+        "x": 119.576,
+        "y": 9.006,
+        "z": -58.902
+      },
+      "Category": "Switch"
+    },
+    {
+      "Text": "Power Box",
+      "ImagePath": "Markers/lever.png",
+      "Position": {
+        "x": 93.369,
+        "y": -392.043,
+        "z": -60.338
+      },
+      "Category": "Switch"
+    },
+    {
+      "Text": "Black Division",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": 68.963,
+        "y": -156.34,
+        "z": -58.726
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "6866ad3853330f9b83064cf9"
+    },
+    {
+      "Text": "Power Box",
+      "ImagePath": "Markers/lever.png",
+      "Position": {
+        "x": 148.104,
+        "y": -248.691,
+        "z": -60.395
+      },
+      "Category": "Switch"
+    },
+    {
+      "Text": "Power Box",
+      "ImagePath": "Markers/lever.png",
+      "Position": {
+        "x": 86.298,
+        "y": -110.255,
+        "z": -60.48
+      },
+      "Category": "Switch"
+    },
+    {
+      "Text": "Power Box",
+      "ImagePath": "Markers/lever.png",
+      "Position": {
+        "x": 86.215,
+        "y": -35.049,
+        "z": -60.48
+      },
+      "Category": "Switch"
+    },
+    {
+      "Text": "Power Box",
+      "ImagePath": "Markers/lever.png",
+      "Position": {
+        "x": 58.859,
+        "y": -263.298,
+        "z": -60.392
+      },
+      "Category": "Switch"
+    }
+  ]
 }

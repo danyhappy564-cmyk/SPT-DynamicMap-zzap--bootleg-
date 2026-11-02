@@ -267,5 +267,312 @@
       "FontSize": 16
     }
   ],
-  "StaticMarkers": []
+  "StaticMarkers": [
+    {
+      "Text": "Operating Room",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": 32.899,
+        "y": -636.186,
+        "z": 5.94
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "62987da96188c076bc0d8c51"
+    },
+    {
+      "Text": "Water Treatment Plant Storage Room",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": -120.902,
+        "y": -736.464,
+        "z": 5.939
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "62987e26a77ec735f90a2995"
+    },
+    {
+      "Text": "Radar Station Commandant Room",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": 355.204,
+        "y": 549.387,
+        "z": 16.545
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "62987c658081af308d7558c6"
+    },
+    {
+      "Text": "Conference Room",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": 333.8,
+        "y": 519.117,
+        "z": 6.07
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "62987cb98081af308d7558c8"
+    },
+    {
+      "Text": "Lighthouse Island Stash",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": 328.641,
+        "y": 487.244,
+        "z": 6.042
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "6a8d581fe74010bf70069d83"
+    },
+    {
+      "Text": "Rogue USEC Stash",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": 47.376,
+        "y": -553.383,
+        "z": 5.68
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "61a64492ba05ef10d62adcc1"
+    },
+    {
+      "Text": "Rogue USEC Workshop",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": -168.675,
+        "y": -497.299,
+        "z": 5.806
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "61aa81fcb225ac1ead7957c3"
+    },
+    {
+      "Text": "Shared Bedroom",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": -50.668,
+        "y": -646.639,
+        "z": 3.049
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "62987dfc402c7f69bf010923"
+    },
+    {
+      "Text": "Rogue USEC Barrack",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": -176.519,
+        "y": -654.164,
+        "z": 5.94
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "62a9cb937377a65d7b070cef"
+    },
+    {
+      "Text": "Police Truck Cabin",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": 83.799,
+        "y": -553.256,
+        "z": 6.611
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "61aa5aed32a4743c3453d319"
+    },
+    {
+      "Text": "Merin Car Trunk",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": 91.11,
+        "y": -130.919,
+        "z": 8.383
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "61aa5b518f5e7a39b41416e2"
+    },
+    {
+      "Text": "USEC Cottage First Safe",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": -81.352,
+        "y": -90.723,
+        "z": 22.327
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "61aa5b7db225ac1ead7957c1"
+    },
+    {
+      "Text": "USEC Cottage Second Safe",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": -81.349,
+        "y": -57.369,
+        "z": 22.33
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "61aa5ba8018e9821b7368da9"
+    },
+    {
+      "Text": "USEC Cottage Room",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": -110.222,
+        "y": -14.407,
+        "z": 21.963
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "66265d7be65f224b2e17c6aa"
+    },
+    {
+      "Text": "Cold Storage Room",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": -124.792,
+        "y": -130.47,
+        "z": 19.295
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "61a6446f4b5f8b70f451b166"
+    },
+    {
+      "Text": "Leon's Hideout",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": -75.389,
+        "y": -290.638,
+        "z": 10.126
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "664d3de85f2355673b09aed5"
+    },
+    {
+      "Text": "Hillside House",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": -147.011,
+        "y": -243.324,
+        "z": 12.67
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "61a6444b8c141d68246e2d2f"
+    },
+    {
+      "Text": "Convenience Store Storage Room",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": -58.587,
+        "y": -292.997,
+        "z": 6.554
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "61a64428a8c6aa1b795f0ba1"
+    }
+  ]
 }
