@@ -22,7 +22,7 @@
     "Ground": {
       "Level": 0,
       "ImagePath": "Maps/Interchange_Rework/Layers/Interchange-Ground.svg",
-      "TesselationIndex": 0,
+      "TesselationIndex": 3,
       "ImageBounds": {
         "Min": {
           "x": -390,
@@ -51,7 +51,7 @@
     "1F": {
       "Level": 1,
       "ImagePath": "Maps/Interchange_Rework/Layers/Interchange-1F.svg",
-      "TesselationIndex": 0,
+      "TesselationIndex": 3,
       "ImageBounds": {
         "Min": {
           "x": -390,
@@ -80,7 +80,7 @@
     "2F": {
       "Level": 2,
       "ImagePath": "Maps/Interchange_Rework/Layers/Interchange-2F.svg",
-      "TesselationIndex": 0,
+      "TesselationIndex": 3,
       "ImageBounds": {
         "Min": {
           "x": -390,
