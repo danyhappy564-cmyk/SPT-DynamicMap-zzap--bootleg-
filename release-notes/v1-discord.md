@@ -25,4 +25,4 @@
 @알림 @테스터
 
 원본모드 : https://github.com/mpstark/SPT-DynamicMaps
-다운로드 : 
+다운로드 : https://github.com/danyhappy564-cmyk/SPT-DynamicMap-zzap--bootleg-/releases/tag/v1
