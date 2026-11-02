@@ -1,0 +1,271 @@
+{
+  "DisplayName": "Lighthouse (Rework)",
+  "Author": "ZZAP",
+  "AuthorLink": "https://github.com/danyhappy564-cmyk/SPT-DynamicMap-zzap--bootleg-",
+  "MapInternalNames": [
+    "Lighthouse"
+  ],
+  "Variant": "backport",
+  "CoordinateRotation": 180,
+  "Bounds": {
+    "Min": {
+      "x": -545,
+      "y": -998
+    },
+    "Max": {
+      "x": 515,
+      "y": 725
+    }
+  },
+  "DefaultLevel": 0,
+  "Layers": {
+    "Ground Floor": {
+      "Level": 0,
+      "ImagePath": "Maps/Lighthouse_Rework/Layers/Lighthouse-Rework.svg",
+      "TesselationIndex": 3,
+      "ImageBounds": {
+        "Min": {
+          "x": -545,
+          "y": -998
+        },
+        "Max": {
+          "x": 515,
+          "y": 725
+        }
+      },
+      "GameBounds": [
+        {
+          "Min": {
+            "x": -545,
+            "y": -998,
+            "z": -10000
+          },
+          "Max": {
+            "x": 515,
+            "y": 725,
+            "z": 10000
+          }
+        }
+      ]
+    }
+  },
+  "Labels": [
+    {
+      "Text": "Train Yard",
+      "Position": {
+        "x": -30,
+        "y": -882,
+        "z": 0
+      },
+      "FontSize": 16
+    },
+    {
+      "Text": "Water Treatment",
+      "Position": {
+        "x": -65,
+        "y": -600,
+        "z": 0
+      },
+      "FontSize": 16
+    },
+    {
+      "Text": "Plant 1",
+      "Position": {
+        "x": 40,
+        "y": -618,
+        "z": 0
+      },
+      "FontSize": 16
+    },
+    {
+      "Text": "Plant 2",
+      "Position": {
+        "x": -97,
+        "y": -737,
+        "z": 0
+      },
+      "FontSize": 16
+    },
+    {
+      "Text": "Plant 3",
+      "Position": {
+        "x": -189,
+        "y": -665,
+        "z": 0
+      },
+      "FontSize": 16
+    },
+    {
+      "Text": "Pipes",
+      "Position": {
+        "x": -182,
+        "y": -552,
+        "z": 0
+      },
+      "FontSize": 16
+    },
+    {
+      "Text": "Gunner Nest",
+      "Position": {
+        "x": 18,
+        "y": -453,
+        "z": 0
+      },
+      "FontSize": 16
+    },
+    {
+      "Text": "Island",
+      "Position": {
+        "x": -177,
+        "y": -356,
+        "z": 0
+      },
+      "FontSize": 16
+    },
+    {
+      "Text": "Cabins",
+      "Position": {
+        "x": -278,
+        "y": -323,
+        "z": 0
+      },
+      "FontSize": 16
+    },
+    {
+      "Text": "Cottages",
+      "Position": {
+        "x": -162,
+        "y": -225,
+        "z": 0
+      },
+      "FontSize": 16
+    },
+    {
+      "Text": "Convenience",
+      "Position": {
+        "x": -55,
+        "y": -288,
+        "z": 0
+      },
+      "FontSize": 16
+    },
+    {
+      "Text": "Red Brick",
+      "Position": {
+        "x": -75,
+        "y": -284,
+        "z": 0
+      },
+      "FontSize": 16
+    },
+    {
+      "Text": "Hillside",
+      "Position": {
+        "x": -151,
+        "y": -243,
+        "z": 0
+      },
+      "FontSize": 16
+    },
+    {
+      "Text": "Boathouses",
+      "Position": {
+        "x": 125,
+        "y": -153,
+        "z": 0
+      },
+      "FontSize": 16
+    },
+    {
+      "Text": "Dead Tree",
+      "Position": {
+        "x": 62,
+        "y": -60,
+        "z": 0
+      },
+      "FontSize": 16
+    },
+    {
+      "Text": "Construction",
+      "Position": {
+        "x": 0,
+        "y": -188,
+        "z": 0
+      },
+      "FontSize": 16
+    },
+    {
+      "Text": "Tennis Court",
+      "Position": {
+        "x": -70,
+        "y": 129,
+        "z": 0
+      },
+      "FontSize": 16
+    },
+    {
+      "Text": "Lightkeeper Island",
+      "Position": {
+        "x": 382,
+        "y": 496,
+        "z": 0
+      },
+      "FontSize": 16
+    },
+    {
+      "Text": "Crash Site",
+      "Position": {
+        "x": -125,
+        "y": 296,
+        "z": 0
+      },
+      "FontSize": 16
+    },
+    {
+      "Text": "Logistics Terminal",
+      "Position": {
+        "x": 42.06,
+        "y": -850.525,
+        "z": 0
+      },
+      "FontSize": 16
+    },
+    {
+      "Text": "Radar Station",
+      "Position": {
+        "x": 388.17,
+        "y": 551.525,
+        "z": 0
+      },
+      "FontSize": 16
+    },
+    {
+      "Text": "Summer Hotel",
+      "Position": {
+        "x": -98.27,
+        "y": -70.945,
+        "z": 0
+      },
+      "FontSize": 16
+    },
+    {
+      "Text": "Grand Chalet",
+      "Position": {
+        "x": -115.935,
+        "y": 92.04,
+        "z": 0
+      },
+      "FontSize": 16
+    },
+    {
+      "Text": "Fishing Village",
+      "Position": {
+        "x": 90.11,
+        "y": 460.33,
+        "z": 0
+      },
+      "FontSize": 16
+    }
+  ],
+  "StaticMarkers": []
+}

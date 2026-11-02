@@ -1,0 +1,284 @@
+{
+  "DisplayName": "Terminal",
+  "Author": "ZZAP",
+  "AuthorLink": "https://github.com/danyhappy564-cmyk/SPT-DynamicMap-zzap--bootleg-",
+  "MapInternalNames": [
+    "Terminal",
+    "terminal"
+  ],
+  "CoordinateRotation": 180,
+  "Bounds": {
+    "Min": {
+      "x": -450,
+      "y": -585
+    },
+    "Max": {
+      "x": 475,
+      "y": 480
+    }
+  },
+  "DefaultLevel": 0,
+  "Layers": {
+    "Ground Floor": {
+      "Level": 0,
+      "ImagePath": "Maps/Terminal_ZZAP/Layers/Terminal-Ground.svg",
+      "TesselationIndex": 3,
+      "ImageBounds": {
+        "Min": {
+          "x": -450,
+          "y": -585
+        },
+        "Max": {
+          "x": 475,
+          "y": 480
+        }
+      },
+      "GameBounds": [
+        {
+          "Min": {
+            "x": -450,
+            "y": -585,
+            "z": -10000
+          },
+          "Max": {
+            "x": 475,
+            "y": 480,
+            "z": 10000
+          }
+        }
+      ]
+    },
+    "Marine Station 2F": {
+      "Level": 1,
+      "ImagePath": "Maps/Terminal_ZZAP/Layers/Terminal-Marine-2F.svg",
+      "TesselationIndex": 3,
+      "ImageBounds": {
+        "Min": {
+          "x": -450,
+          "y": -585
+        },
+        "Max": {
+          "x": 475,
+          "y": 480
+        }
+      },
+      "GameBounds": [
+        {
+          "Min": {
+            "x": 257,
+            "y": -297,
+            "z": -58.3
+          },
+          "Max": {
+            "x": 293,
+            "y": -189,
+            "z": -53.3
+          }
+        }
+      ]
+    },
+    "Pumping Basement": {
+      "Level": -1,
+      "ImagePath": "Maps/Terminal_ZZAP/Layers/Terminal-Pump-Basement.svg",
+      "TesselationIndex": 3,
+      "ImageBounds": {
+        "Min": {
+          "x": -450,
+          "y": -585
+        },
+        "Max": {
+          "x": 475,
+          "y": 480
+        }
+      },
+      "GameBounds": [
+        {
+          "Min": {
+            "x": 131,
+            "y": 254,
+            "z": -10000
+          },
+          "Max": {
+            "x": 180,
+            "y": 268,
+            "z": -61.3
+          }
+        }
+      ]
+    }
+  },
+  "Labels": [
+    {
+      "Text": "Old Station",
+      "Position": {
+        "x": 128.904,
+        "y": -430.736,
+        "z": -60.4
+      },
+      "FontSize": 12
+    },
+    {
+      "Text": "Substation",
+      "Position": {
+        "x": 114,
+        "y": -399,
+        "z": -60.4
+      },
+      "FontSize": 12
+    },
+    {
+      "Text": "Bulk Cargo A",
+      "Position": {
+        "x": 5,
+        "y": -438,
+        "z": -60.4
+      },
+      "FontSize": 15
+    },
+    {
+      "Text": "Bulk Cargo B",
+      "Position": {
+        "x": -26,
+        "y": 235,
+        "z": -60.4
+      },
+      "FontSize": 15
+    },
+    {
+      "Text": "Marine Station",
+      "Position": {
+        "x": 274.592,
+        "y": -243.1,
+        "z": -60.4
+      },
+      "FontSize": 12
+    },
+    {
+      "Text": "Administration",
+      "Position": {
+        "x": 94.789,
+        "y": -137.66,
+        "z": -60.4
+      },
+      "FontSize": 12
+    },
+    {
+      "Text": "Old Administration",
+      "Position": {
+        "x": 197.844,
+        "y": -227.512,
+        "z": -60.4
+      },
+      "FontSize": 10
+    },
+    {
+      "Text": "Oil Administration",
+      "Position": {
+        "x": 146,
+        "y": 16,
+        "z": -60.4
+      },
+      "FontSize": 9
+    },
+    {
+      "Text": "Fire Station",
+      "Position": {
+        "x": 179,
+        "y": 40,
+        "z": -60.4
+      },
+      "FontSize": 9
+    },
+    {
+      "Text": "Pumping Station",
+      "Position": {
+        "x": 155,
+        "y": 254,
+        "z": -60.4
+      },
+      "FontSize": 12
+    },
+    {
+      "Text": "Oil Storage",
+      "Position": {
+        "x": 159,
+        "y": 177,
+        "z": -60.4
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "Container Port A",
+      "Position": {
+        "x": 225,
+        "y": 125,
+        "z": -60.4
+      },
+      "FontSize": 13
+    },
+    {
+      "Text": "Container Port B",
+      "Position": {
+        "x": -106,
+        "y": 30,
+        "z": -60.4
+      },
+      "FontSize": 15
+    },
+    {
+      "Text": "Extraction Yard",
+      "Position": {
+        "x": -285,
+        "y": 267,
+        "z": -61.0
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "Freight Wagons",
+      "Position": {
+        "x": 60.7,
+        "y": 81,
+        "z": -58.7
+      },
+      "FontSize": 10
+    },
+    {
+      "Text": "Old Station Spawn",
+      "Position": {
+        "x": 127.005,
+        "y": -418.934,
+        "z": -60.069
+      },
+      "FontSize": 10
+    },
+    {
+      "Text": "Zubr Exit",
+      "Position": {
+        "x": -298.9,
+        "y": 72.43,
+        "z": -59.24
+      },
+      "FontSize": 12
+    },
+    {
+      "Text": "Marine Station 2F",
+      "Position": {
+        "x": 275,
+        "y": -242,
+        "z": -56.27
+      },
+      "FontSize": 12
+    },
+    {
+      "Text": "Pumping Basement",
+      "Position": {
+        "x": 155,
+        "y": 261,
+        "z": -62.46
+      },
+      "FontSize": 12
+    }
+  ],
+  "StaticMarkers": []
+}
