@@ -282,6 +282,17 @@
   ],
   "StaticMarkers": [
     {
+      "Text": "Zubr Exit",
+      "ImagePath": "Markers/exit.png",
+      "Position": {
+        "x": -298.9,
+        "y": 72.43,
+        "z": -59.24
+      },
+      "Category": "Extract",
+      "ShowInRaid": false
+    },
+    {
       "Text": "Pier Door",
       "ImagePath": "Markers/door_with_lock.png",
       "Position": {
