@@ -16,6 +16,7 @@ namespace DynamicMaps.UI.Components
         private static Vector2 _markerSize = new Vector2(30, 30);
         private static float _zoomMaxScaler = 10f;  // multiplier against zoomMin
         private static float _zoomMinScaler = 1.1f; // divider against ratio of a provided rect
+        private static float _zoomOpenScaler = 1.4f; // zzap: multiplier against zoomMin when the map opens, zoomMin leaves wide margins
 
         public event Action<int> OnLevelSelected;
 
@@ -31,6 +32,7 @@ namespace DynamicMaps.UI.Components
 
         // Zoom holders
         public float ZoomMin { get; private set; }      // set when map loaded
+        public float ZoomOpen => Mathf.Min(ZoomMin * _zoomOpenScaler, ZoomMax);
         public float ZoomMax { get; private set; }      // set when map loaded
         public float ZoomMain { get; private set; }
         public float ZoomMini { get; private set; }
@@ -378,7 +380,7 @@ namespace DynamicMaps.UI.Components
             ZoomMax = _zoomMaxScaler * ZoomMin;
 
             // this will set everything up for initial zoom - mini comes from the settings on load, main needs to be minimum so the user can change it
-            ZoomMain = ZoomMin;
+            ZoomMain = ZoomOpen;
             ZoomMini = NormalizedToActual(Settings.ZoomMiniMap.Value);
             
             ApplyZoom(ZoomCurrent, 0f);
