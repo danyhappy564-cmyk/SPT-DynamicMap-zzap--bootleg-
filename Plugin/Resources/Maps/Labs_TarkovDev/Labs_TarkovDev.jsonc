@@ -6,8 +6,8 @@
   "Variant": "original",
   "CoordinateRotation": 270,
   "Bounds": {
-    "Min": {"x": -292, "y": -441},
-    "Max": {"x": -96, "y": -223}
+    "Min": {"x": -292, "y": -449},
+    "Max": {"x": -78, "y": -223}
   },
   "DefaultLevel": 0,
   "Layers": {
@@ -16,13 +16,13 @@
       "ImagePath": "Maps/Labs_TarkovDev/Layers/Labs_Technical_Level.svg",
       "TesselationIndex": 0,
       "ImageBounds": {
-        "Min": {"x": -292, "y": -441},
-        "Max": {"x": -96, "y": -223}
+        "Min": {"x": -292, "y": -449},
+        "Max": {"x": -78, "y": -223}
       },
       "GameBounds": [
         {
-          "Min": {"x": -292, "y": -441, "z": -100},
-          "Max": {"x": -96, "y": -223, "z": -0.9}
+          "Min": {"x": -292, "y": -449, "z": -100},
+          "Max": {"x": -78, "y": -223, "z": -0.9}
         }
       ]
     },
@@ -31,13 +31,13 @@
       "ImagePath": "Maps/Labs_TarkovDev/Layers/Labs_First_Level.svg",
       "TesselationIndex": 0,
       "ImageBounds": {
-        "Min": {"x": -292, "y": -441},
-        "Max": {"x": -96, "y": -223}
+        "Min": {"x": -292, "y": -449},
+        "Max": {"x": -78, "y": -223}
       },
       "GameBounds": [
         {
-          "Min": {"x": -292, "y": -441, "z": -0.9},
-          "Max": {"x": -96, "y": -223, "z": 3}
+          "Min": {"x": -292, "y": -449, "z": -0.9},
+          "Max": {"x": -78, "y": -223, "z": 3}
         }
       ]
     },
@@ -46,8 +46,8 @@
       "ImagePath": "Maps/Labs_TarkovDev/Layers/Labs_Second_Level.svg",
       "TesselationIndex": 0,
       "ImageBounds": {
-        "Min": {"x": -292, "y": -441},
-        "Max": {"x": -96, "y": -223}
+        "Min": {"x": -292, "y": -449},
+        "Max": {"x": -78, "y": -223}
       },
       "GameBounds": [
         {
@@ -58,6 +58,11 @@
     }
   },
   "Labels": [
+    {
+      "Text": "Secret Lab",
+      "Position": {"x": -100.0, "y": -433.0, "z": 0.5},
+      "FontSize": 12
+    }
   ],
   "StaticMarkers": [
     {
