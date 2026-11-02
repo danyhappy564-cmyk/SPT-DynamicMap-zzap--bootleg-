@@ -1,0 +1,778 @@
+{
+  "DisplayName": "Interchange (Rework)",
+  "Author": "ZZAP",
+  "AuthorLink": "https://github.com/danyhappy564-cmyk/SPT-DynamicMap-zzap--bootleg-",
+  "MapInternalNames": [
+    "Interchange"
+  ],
+  "Variant": "backport",
+  "CoordinateRotation": 180,
+  "Bounds": {
+    "Min": {
+      "x": -390,
+      "y": -460
+    },
+    "Max": {
+      "x": 650,
+      "y": 460
+    }
+  },
+  "DefaultLevel": 0,
+  "Layers": {
+    "Ground": {
+      "Level": 0,
+      "ImagePath": "Maps/Interchange_Rework/Layers/Interchange-Ground.svg",
+      "TesselationIndex": 0,
+      "ImageBounds": {
+        "Min": {
+          "x": -390,
+          "y": -460
+        },
+        "Max": {
+          "x": 650,
+          "y": 460
+        }
+      },
+      "GameBounds": [
+        {
+          "Min": {
+            "x": -390,
+            "y": -460,
+            "z": -10000
+          },
+          "Max": {
+            "x": 650,
+            "y": 460,
+            "z": 10000
+          }
+        }
+      ]
+    },
+    "1F": {
+      "Level": 1,
+      "ImagePath": "Maps/Interchange_Rework/Layers/Interchange-1F.svg",
+      "TesselationIndex": 0,
+      "ImageBounds": {
+        "Min": {
+          "x": -390,
+          "y": -460
+        },
+        "Max": {
+          "x": 650,
+          "y": 460
+        }
+      },
+      "GameBounds": [
+        {
+          "Min": {
+            "x": -225,
+            "y": -335,
+            "z": 25
+          },
+          "Max": {
+            "x": 175,
+            "y": 220,
+            "z": 34
+          }
+        }
+      ]
+    },
+    "2F": {
+      "Level": 2,
+      "ImagePath": "Maps/Interchange_Rework/Layers/Interchange-2F.svg",
+      "TesselationIndex": 0,
+      "ImageBounds": {
+        "Min": {
+          "x": -390,
+          "y": -460
+        },
+        "Max": {
+          "x": 650,
+          "y": 460
+        }
+      },
+      "GameBounds": [
+        {
+          "Min": {
+            "x": -225,
+            "y": -335,
+            "z": 34
+          },
+          "Max": {
+            "x": 175,
+            "y": 220,
+            "z": 10000
+          }
+        }
+      ]
+    }
+  },
+  "Labels": [
+    {
+      "Text": "IDEA",
+      "Position": {
+        "x": -55.035,
+        "y": -238.908,
+        "z": 27.12
+      },
+      "FontSize": 18
+    },
+    {
+      "Text": "OLI",
+      "Position": {
+        "x": -76.799,
+        "y": 139.598,
+        "z": 27.1
+      },
+      "FontSize": 18
+    },
+    {
+      "Text": "Goshan",
+      "Position": {
+        "x": -156.87,
+        "y": -72.74,
+        "z": 27.122
+      },
+      "FontSize": 18
+    },
+    {
+      "Text": "Power Station",
+      "Position": {
+        "x": -243.14,
+        "y": -369.15,
+        "z": 21.35
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "IDEA Parking",
+      "Position": {
+        "x": 112.84,
+        "y": -258.8,
+        "z": 20.983
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "OLI Parking",
+      "Position": {
+        "x": -26.55,
+        "y": 75.45,
+        "z": 21.517
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "Truck Yard",
+      "Position": {
+        "x": -163.7,
+        "y": 156.242,
+        "z": 21.373
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "BEAR Camp",
+      "Position": {
+        "x": 507.284,
+        "y": 131.19,
+        "z": 26.28
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "Tagilla Arena",
+      "Position": {
+        "x": -163.94,
+        "y": -130.534,
+        "z": 21.38
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "KIBA",
+      "Position": {
+        "x": -16.743,
+        "y": -28.57,
+        "z": 30.001
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "Mantis",
+      "Position": {
+        "x": 17.69,
+        "y": -72.615,
+        "z": 29.681
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "Adik",
+      "Position": {
+        "x": 18.815,
+        "y": -14.144,
+        "z": 30.001
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "Brutal",
+      "Position": {
+        "x": 18.048,
+        "y": -35.874,
+        "z": 30.001
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "TechnoSpektre",
+      "Position": {
+        "x": 63.216,
+        "y": 46.845,
+        "z": 30.005
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "Techlight",
+      "Position": {
+        "x": 94.579,
+        "y": 50.481,
+        "z": 39.37
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "Bizarro",
+      "Position": {
+        "x": -62.006,
+        "y": -103.307,
+        "z": 30.019
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "Goshan Cafe",
+      "Position": {
+        "x": -62.006,
+        "y": -26.21,
+        "z": 30.001
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "Fashion Store",
+      "Position": {
+        "x": 37.479,
+        "y": 65.138,
+        "z": 39.37
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "Burger Spot",
+      "Position": {
+        "x": -45.284,
+        "y": -103.755,
+        "z": 39.193
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "Burger Houses",
+      "Position": {
+        "x": 71.471,
+        "y": -27.259,
+        "z": 39.568
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "Coffee Jay",
+      "Position": {
+        "x": 44.322,
+        "y": -71.776,
+        "z": 39.199
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "Goshan Security",
+      "Position": {
+        "x": -66.299,
+        "y": 50.939,
+        "z": 29.391
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "Goshan Offices",
+      "Position": {
+        "x": -71.835,
+        "y": 43.209,
+        "z": 29.406
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "ULTRA Medical Storage",
+      "Position": {
+        "x": 67.53,
+        "y": 40.891,
+        "z": 37.602
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "NecrusPharm Pharmacy",
+      "Position": {
+        "x": 68.537,
+        "y": -255.45,
+        "z": 22.492
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "OLI Logistics Office",
+      "Position": {
+        "x": 83.199,
+        "y": 115.673,
+        "z": 28.12
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "OLI Admin Office",
+      "Position": {
+        "x": 85.184,
+        "y": 104.638,
+        "z": 28.12
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "Grumpy's hideout",
+      "Position": {
+        "x": -199.786,
+        "y": -348.208,
+        "z": 22.337
+      },
+      "FontSize": 14
+    },
+    {
+      "Text": "Railway Exfil",
+      "Position": {
+        "x": 474.57,
+        "y": -433.74,
+        "z": 19.92
+      },
+      "FontSize": 12
+    },
+    {
+      "Text": "Saferoom Exfil",
+      "Position": {
+        "x": -47.73,
+        "y": 44.055,
+        "z": 22.97
+      },
+      "FontSize": 12
+    },
+    {
+      "Text": "Emercom Checkpoint",
+      "Position": {
+        "x": -321.56,
+        "y": 266.74,
+        "z": 24.18
+      },
+      "FontSize": 12
+    },
+    {
+      "Text": "Scav Camp (Co-Op)",
+      "Position": {
+        "x": -97.48,
+        "y": -73.09,
+        "z": 18.12
+      },
+      "FontSize": 12
+    },
+    {
+      "Text": "Sniper Exit",
+      "Position": {
+        "x": 613.9,
+        "y": 71.3,
+        "z": 27.9
+      },
+      "FontSize": 12
+    },
+    {
+      "Text": "Power Station V-Ex",
+      "Position": {
+        "x": -302.89,
+        "y": -367.73,
+        "z": 21.65
+      },
+      "FontSize": 12
+    },
+    {
+      "Text": "Secret Extraction",
+      "Position": {
+        "x": -138.53,
+        "y": -175.11,
+        "z": 22.51
+      },
+      "FontSize": 12
+    }
+  ],
+  "StaticMarkers": [
+    {
+      "Text": "Main Power Switch",
+      "ImagePath": "Markers/lever.png",
+      "Position": {
+        "x": -201.108,
+        "y": -357.8291,
+        "z": 23.1857
+      },
+      "Category": "Switch"
+    },
+    {
+      "Text": "Saferoom Urinal Switch",
+      "ImagePath": "Markers/lever.png",
+      "Position": {
+        "x": -51.547,
+        "y": -125.4407,
+        "z": 36.86
+      },
+      "Category": "Switch"
+    },
+    {
+      "Text": "2nd Floor Alarm Console",
+      "ImagePath": "Markers/lever.png",
+      "Position": {
+        "x": -46.555,
+        "y": -55.202,
+        "z": 37.347
+      },
+      "Category": "Switch"
+    },
+    {
+      "Text": "1st Floor Alarm Console",
+      "ImagePath": "Markers/lever.png",
+      "Position": {
+        "x": -67.1343,
+        "y": 53.7423,
+        "z": 27.9506
+      },
+      "Category": "Switch"
+    },
+    {
+      "Text": "Inside Saferoom Exfil Switch",
+      "ImagePath": "Markers/lever.png",
+      "Position": {
+        "x": -50.621,
+        "y": 45.617,
+        "z": 22.632
+      },
+      "Category": "Switch"
+    },
+    {
+      "Text": "Object 14 Container Switch",
+      "ImagePath": "Markers/lever.png",
+      "Position": {
+        "x": -47.698,
+        "y": 42.6198,
+        "z": 22.891
+      },
+      "Category": "Switch"
+    },
+    {
+      "Text": "Emercom Checkpoint",
+      "ImagePath": "Markers/exit.png",
+      "Position": {
+        "x": -321.56,
+        "y": 266.74,
+        "z": 21.9496
+      },
+      "Category": "Extract",
+      "ShowInRaid": false,
+      "Color": {
+        "r": 0.0,
+        "g": 1.0,
+        "b": 0.0,
+        "a": 1.0
+      }
+    },
+    {
+      "Text": "Railway Exfil",
+      "ImagePath": "Markers/exit.png",
+      "Position": {
+        "x": 474.57,
+        "y": -433.74,
+        "z": 19.92
+      },
+      "Category": "Extract",
+      "ShowInRaid": false,
+      "Color": {
+        "r": 0.0,
+        "g": 1.0,
+        "b": 0.0,
+        "a": 1.0
+      }
+    },
+    {
+      "Text": "Saferoom Exfil",
+      "ImagePath": "Markers/exit.png",
+      "Position": {
+        "x": -47.73,
+        "y": 44.055,
+        "z": 22.97
+      },
+      "Category": "Extract",
+      "ShowInRaid": false,
+      "Color": {
+        "r": 0.0,
+        "g": 1.0,
+        "b": 0.0,
+        "a": 1.0
+      }
+    },
+    {
+      "Text": "Power Substation Utility Cabin",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": -223.1147,
+        "y": -271.3479,
+        "z": 22.5544
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "5ad5d49886f77455f9731921"
+    },
+    {
+      "Text": "ULTRA Medical Storage",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": 67.53,
+        "y": 40.8912,
+        "z": 37.6017
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "5e42c71586f7747f245e1343"
+    },
+    {
+      "Text": "Kiba Arms Inner Grate",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": -9.887,
+        "y": -33.7652,
+        "z": 28.241
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "5addaffe86f77470b455f900"
+    },
+    {
+      "Text": "Kiba Arms Outer Door",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": -9.444,
+        "y": -33.709,
+        "z": 28.241
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "5ad5d7d286f77450166e0a89"
+    },
+    {
+      "Text": "Object #11SR Saferoom",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": -51.9125,
+        "y": 45.8359,
+        "z": 22.2939
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "5e42c81886f7742a01529f57"
+    },
+    {
+      "Text": "Object #21WS",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": 140.1957,
+        "y": 263.3153,
+        "z": 25.208
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "5e42c83786f7742a021fdf3c"
+    },
+    {
+      "Text": "NecrusPharm Pharmacy",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": 68.5372,
+        "y": -255.4501,
+        "z": 22.4921
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "5ad5d64486f774079b080af8"
+    },
+    {
+      "Text": "Emercom Medical Unit",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": 24.137,
+        "y": -112.8551,
+        "z": 28.479
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "5ad5db3786f7743568421cce"
+    },
+    {
+      "Text": "Emercom Medical Unit",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": 34.1412,
+        "y": -108.2877,
+        "z": 28.479
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "5ad5db3786f7743568421cce"
+    },
+    {
+      "Text": "Emercom Medical Unit",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": 6.7322,
+        "y": -107.3043,
+        "z": 28.479
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "5ad5db3786f7743568421cce"
+    },
+    {
+      "Text": "OLI Logistics Office",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": 83.199,
+        "y": 115.6728,
+        "z": 28.12
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "5ad5cfbd86f7742c825d6104"
+    },
+    {
+      "Text": "OLI Outlet Utility Room",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": -102.8238,
+        "y": 80.481,
+        "z": 28.12
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "5ad5d20586f77449be26d877"
+    },
+    {
+      "Text": "OLI Admin Office",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": 85.1842,
+        "y": 104.6382,
+        "z": 28.12
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "5ad5ccd186f774446d5706e9"
+    },
+    {
+      "Text": "Grumpy's hideout",
+      "ImagePath": "Markers/door_with_lock.png",
+      "Position": {
+        "x": -199.7863,
+        "y": -348.208,
+        "z": 22.337
+      },
+      "Category": "LockedDoor",
+      "Color": {
+        "r": 1.0,
+        "g": 0.921568632,
+        "b": 0.0156862754,
+        "a": 1.0
+      },
+      "AssociatedItemId": "664d3dd590294949fe2d81b7"
+    }
+  ]
+}

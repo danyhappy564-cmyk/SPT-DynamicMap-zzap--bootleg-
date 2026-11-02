@@ -1,0 +1,242 @@
+{
+  "DisplayName": "Factory (Classic)",
+  "Author": "Tarkov.dev; ZZAP",
+  "AuthorLink": "https://tarkov.dev",
+  "MapInternalNames": [
+    "factory4_day",
+    "factory4_night"
+  ],
+  "Variant": "backport",
+  "CoordinateRotation": 90,
+  "Bounds": {
+    "Min": {
+      "x": -65,
+      "y": -64.5
+    },
+    "Max": {
+      "x": 77.6,
+      "y": 67.2
+    }
+  },
+  "DefaultLevel": 0,
+  "Layers": {
+    "Tunnels": {
+      "Level": -1,
+      "ImagePath": "Maps/Factory_Classic/Layers/Factory-Basement.svg",
+      "TesselationIndex": 0,
+      "ImageBounds": {
+        "Min": {
+          "x": -65,
+          "y": -64.5
+        },
+        "Max": {
+          "x": 77.6,
+          "y": 67.2
+        }
+      },
+      "GameBounds": [
+        {
+          "Min": {
+            "x": -65,
+            "y": -64.5,
+            "z": -100
+          },
+          "Max": {
+            "x": 77.6,
+            "y": 67.2,
+            "z": -1
+          }
+        }
+      ]
+    },
+    "Ground Floor": {
+      "Level": 0,
+      "ImagePath": "Maps/Factory_Classic/Layers/Factory-Ground_Floor.svg",
+      "TesselationIndex": 0,
+      "ImageBounds": {
+        "Min": {
+          "x": -65,
+          "y": -64.5
+        },
+        "Max": {
+          "x": 77.6,
+          "y": 67.2
+        }
+      },
+      "GameBounds": [
+        {
+          "Min": {
+            "x": -65,
+            "y": -64.5,
+            "z": -1
+          },
+          "Max": {
+            "x": 77.6,
+            "y": 67.2,
+            "z": 3
+          }
+        }
+      ]
+    },
+    "2nd Floor": {
+      "Level": 1,
+      "ImagePath": "Maps/Factory_Classic/Layers/Factory-Second_Floor.svg",
+      "TesselationIndex": 0,
+      "ImageBounds": {
+        "Min": {
+          "x": -65,
+          "y": -64.5
+        },
+        "Max": {
+          "x": 77.6,
+          "y": 67.2
+        }
+      },
+      "GameBounds": [
+        {
+          "Min": {
+            "x": -65,
+            "y": -64.5,
+            "z": 3
+          },
+          "Max": {
+            "x": 77.6,
+            "y": 67.2,
+            "z": 6
+          }
+        }
+      ]
+    },
+    "3rd Floor": {
+      "Level": 2,
+      "ImagePath": "Maps/Factory_Classic/Layers/Factory-Third_Floor.svg",
+      "TesselationIndex": 0,
+      "ImageBounds": {
+        "Min": {
+          "x": -65,
+          "y": -64.5
+        },
+        "Max": {
+          "x": 77.6,
+          "y": 67.2
+        }
+      },
+      "GameBounds": [
+        {
+          "Min": {
+            "x": -65,
+            "y": -64.5,
+            "z": 6
+          },
+          "Max": {
+            "x": 77.6,
+            "y": 67.2,
+            "z": 100
+          }
+        }
+      ]
+    }
+  },
+  "Labels": [
+    {
+      "Text": "Gate m",
+      "Position": {
+        "x": -17.166,
+        "y": -54.752,
+        "z": 1.992
+      },
+      "FontSize": 12
+    },
+    {
+      "Text": "Cellars",
+      "Position": {
+        "x": 73.894,
+        "y": -29.082,
+        "z": -3.288
+      },
+      "FontSize": 12
+    },
+    {
+      "Text": "Gate 3",
+      "Position": {
+        "x": 58.709,
+        "y": 60.868,
+        "z": 1.592
+      },
+      "FontSize": 12
+    },
+    {
+      "Text": "Camera Bunker Door",
+      "Position": {
+        "x": -15.716,
+        "y": 40.108,
+        "z": -1.648
+      },
+      "FontSize": 12
+    },
+    {
+      "Text": "Office Window",
+      "Position": {
+        "x": 17.833,
+        "y": 39.885,
+        "z": 8.73
+      },
+      "FontSize": 12
+    },
+    {
+      "Text": "Gate 0",
+      "Position": {
+        "x": -59.836,
+        "y": 56.108,
+        "z": 2.852
+      },
+      "FontSize": 12
+    },
+    {
+      "Text": "Pump Station",
+      "Position": {
+        "x": 61.968,
+        "y": -13.493,
+        "z": 0.016
+      },
+      "FontSize": 12
+    },
+    {
+      "Text": "Showers",
+      "Position": {
+        "x": 30.781,
+        "y": 39.535,
+        "z": 4.529
+      },
+      "FontSize": 12
+    },
+    {
+      "Text": "Office Hallway",
+      "Position": {
+        "x": 22.381,
+        "y": 35.311,
+        "z": 10.012
+      },
+      "FontSize": 12
+    },
+    {
+      "Text": "Bunker",
+      "Position": {
+        "x": -8.624,
+        "y": -22.598,
+        "z": -3.908
+      },
+      "FontSize": 12
+    },
+    {
+      "Text": "Admin Office",
+      "Position": {
+        "x": 14.603,
+        "y": 41.67,
+        "z": 2.7
+      },
+      "FontSize": 12
+    }
+  ],
+  "StaticMarkers": []
+}
