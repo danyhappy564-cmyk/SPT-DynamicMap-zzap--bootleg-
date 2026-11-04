@@ -263,7 +263,7 @@ namespace DynamicMaps.DynamicMarkers
             {
                 category = _scavCategory;
                 imagePath = _scavImagePath;
-                color = Settings.ScavColor.Value;
+                color = GetScavSideColor(player);
             }
 
             if (!ShouldShowCategory(category))
@@ -274,6 +274,25 @@ namespace DynamicMaps.DynamicMarkers
             // try adding marker
             var marker = _lastMapView.AddPlayerMarker(player, category, color, imagePath);
             _playerMarkers[player] = marker;
+        }
+
+        // zzap v2: RUAF, Black Division, Raiders, ... are Savage side, so they used to get the Scav color
+        private static Color GetScavSideColor(Player player)
+        {
+            if (!Settings.ColorBotsByFaction.Value) return Settings.ScavColor.Value;
+
+            switch (player.GetBotFaction())
+            {
+                case GameUtils.BotFaction.BossFollower: return Settings.BossFollowerColor.Value;
+                case GameUtils.BotFaction.Raider: return Settings.RaiderColor.Value;
+                case GameUtils.BotFaction.Rogue: return Settings.RogueColor.Value;
+                case GameUtils.BotFaction.Cultist: return Settings.CultistColor.Value;
+                case GameUtils.BotFaction.Ruaf: return Settings.RuafColor.Value;
+                case GameUtils.BotFaction.RuafRemnant: return Settings.RuafRemnantColor.Value;
+                case GameUtils.BotFaction.BlackDiv: return Settings.BlackDivColor.Value;
+                case GameUtils.BotFaction.Civilian: return Settings.CivilianColor.Value;
+                default: return Settings.ScavColor.Value;
+            }
         }
 
         private void RemoveDisabledMarkers()

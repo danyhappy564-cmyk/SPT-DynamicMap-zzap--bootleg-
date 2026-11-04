@@ -121,6 +121,16 @@ namespace DynamicMaps.Config
         public static ConfigEntry<Color> PmcUsecColor;
         public static ConfigEntry<Color> ScavColor;
         public static ConfigEntry<Color> BossColor;
+        // zzap v2: separate colors for non-scav factions that are on the scav side (Savage)
+        public static ConfigEntry<bool> ColorBotsByFaction;
+        public static ConfigEntry<Color> BossFollowerColor;
+        public static ConfigEntry<Color> RaiderColor;
+        public static ConfigEntry<Color> RogueColor;
+        public static ConfigEntry<Color> CultistColor;
+        public static ConfigEntry<Color> RuafColor;
+        public static ConfigEntry<Color> RuafRemnantColor;
+        public static ConfigEntry<Color> BlackDivColor;
+        public static ConfigEntry<Color> CivilianColor;
         public static ConfigEntry<Color> AirdropColor;
         public static ConfigEntry<Color> BackpackColor;
         public static ConfigEntry<Color> LootItemColor;
@@ -817,7 +827,88 @@ namespace DynamicMaps.Config
                     "Color of the marker",
                     null,
                     new ConfigurationManagerAttributes { })));
-            
+
+            ConfigEntries.Add(ColorBotsByFaction = config.Bind(
+                MarkerColors,
+                "Color bots by faction",
+                true,
+                new ConfigDescription(
+                    "Give boss followers, Raiders, Rogues, Cultists, RUAF, RUAF Remnant, Black Division and Terminal civilians their own marker colors instead of the Scav color",
+                    null,
+                    new ConfigurationManagerAttributes { })));
+
+            ConfigEntries.Add(BossFollowerColor = config.Bind(
+                MarkerColors,
+                "Boss follower marker color",
+                new Color(0.7f, 0.4f, 0.15f),
+                new ConfigDescription(
+                    "Color of the marker",
+                    null,
+                    new ConfigurationManagerAttributes { })));
+
+            ConfigEntries.Add(RaiderColor = config.Bind(
+                MarkerColors,
+                "Raider marker color",
+                new Color(0.65f, 0.3f, 1f),
+                new ConfigDescription(
+                    "Color of the marker",
+                    null,
+                    new ConfigurationManagerAttributes { })));
+
+            ConfigEntries.Add(RogueColor = config.Bind(
+                MarkerColors,
+                "Rogue marker color",
+                new Color(0f, 0.85f, 1f),
+                new ConfigDescription(
+                    "Color of the marker",
+                    null,
+                    new ConfigurationManagerAttributes { })));
+
+            ConfigEntries.Add(CultistColor = config.Bind(
+                MarkerColors,
+                "Cultist marker color",
+                new Color(0.95f, 0.1f, 0.6f),
+                new ConfigDescription(
+                    "Color of the marker",
+                    null,
+                    new ConfigurationManagerAttributes { })));
+
+            ConfigEntries.Add(RuafColor = config.Bind(
+                MarkerColors,
+                "RUAF marker color",
+                new Color(0.5f, 0.6f, 0.15f),
+                new ConfigDescription(
+                    "Color of the marker (RUAF Come Home mod)",
+                    null,
+                    new ConfigurationManagerAttributes { })));
+
+            ConfigEntries.Add(RuafRemnantColor = config.Bind(
+                MarkerColors,
+                "RUAF Remnant marker color",
+                new Color(0.8f, 0.75f, 0.5f),
+                new ConfigDescription(
+                    "Color of the marker (RUAF Come Home mod)",
+                    null,
+                    new ConfigurationManagerAttributes { })));
+
+            ConfigEntries.Add(BlackDivColor = config.Bind(
+                MarkerColors,
+                "Black Division marker color",
+                new Color(0f, 0.6f, 0.5f),
+                new ConfigDescription(
+                    "Color of the marker (Black Division mod)",
+                    null,
+                    new ConfigurationManagerAttributes { })));
+
+            ConfigEntries.Add(CivilianColor = config.Bind(
+                MarkerColors,
+                "Civilian marker color",
+                new Color(1f, 1f, 1f),
+                new ConfigDescription(
+                    "Color of the marker (Manimal Terminal civilians)",
+                    null,
+                    new ConfigurationManagerAttributes { })));
+
             ConfigEntries.Add(AirdropColor = config.Bind(
                 MarkerColors,
                 "Airdrop marker color",

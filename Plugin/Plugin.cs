@@ -17,8 +17,8 @@ using System.Reflection;
 namespace DynamicMaps
 {
     // the version number here is generated on build and may have a warning if not yet built
-    // zzap: the name carries the release (BepInEx needs a numeric version; 1.2.2 also keeps the Korean addon's 1.2.1 hooks off)
-    [BepInPlugin("com.mpstark.dynamicmaps", "DynamicMaps zzap-bootleg- v1", BuildInfo.Version)]
+    // zzap: the name carries the release (BepInEx needs a numeric version; 1.2.2+ also keeps the Korean addon's 1.2.1 hooks off)
+    [BepInPlugin("com.mpstark.dynamicmaps", "DynamicMaps zzap-bootleg- v2", BuildInfo.Version)]
     [BepInDependency("com.SPT.custom", "4.1.0")]
     [BepInDependency("com.SamSWAT.HeliCrash.ArysReloaded", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("com.fika.core", BepInDependency.DependencyFlags.SoftDependency)]

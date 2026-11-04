@@ -156,6 +156,62 @@ namespace DynamicMaps.Utils
             return player.Profile.Side == EPlayerSide.Savage;
         }
 
+        // zzap v2: factions that sit on the Savage side but are not plain scavs
+        public enum BotFaction
+        {
+            None,
+            BossFollower,
+            Raider,
+            Rogue,
+            Cultist,
+            Ruaf,
+            RuafRemnant,
+            BlackDiv,
+            Civilian,
+        }
+
+        // custom WildSpawnType values fixed by each mod's prepatcher (MoreBotsAPI)
+        private const int RuafFirstId = 848400;         // RUAF Come Home: 848400-848405
+        private const int RuafLastId = 848405;
+        private const int RuafRemnantId = 848406;       // RUAF Come Home: remnantRifleman
+        private static readonly HashSet<int> BlackDivIds = new HashSet<int>
+        {
+            848420, 848421, 848422, 848423, 848424, 848426, // Black Division (848425 is unused)
+        };
+        private const int TerminalCivilianId = 776701;  // ManimalTerminal prepatch: civilian
+
+        public static BotFaction GetBotFaction(this IPlayer player)
+        {
+            var role = player.Profile.Info.Settings.Role;
+            var id = (int)role;
+
+            if (id >= RuafFirstId && id <= RuafLastId) return BotFaction.Ruaf;
+            if (id == RuafRemnantId) return BotFaction.RuafRemnant;
+            if (BlackDivIds.Contains(id)) return BotFaction.BlackDiv;
+            if (id == TerminalCivilianId) return BotFaction.Civilian;
+
+            switch (role)
+            {
+                case WildSpawnType.pmcBot:
+                    return BotFaction.Raider;
+                case WildSpawnType.exUsec:
+                    return BotFaction.Rogue;
+                case WildSpawnType.sectantWarrior:
+                case WildSpawnType.sectantPriest:
+                case WildSpawnType.sectantPredvestnik:
+                case WildSpawnType.sectantPrizrak:
+                case WildSpawnType.sectantOni:
+                    return BotFaction.Cultist;
+                case WildSpawnType.bossBoarSniper:      // Kaban's sniper guards
+                    return BotFaction.BossFollower;
+            }
+
+            // followerBully, followerKojaniy, followerTagilla, ... (named enum values only)
+            if (role.ToString().StartsWith("follower", StringComparison.Ordinal)) return BotFaction.BossFollower;
+
+            return BotFaction.None;
+        }
+
         public static bool DidMainPlayerKill(this IPlayer player)
         {
             var aggressor = _playerLastAggressorField.GetValue(player) as IPlayer;

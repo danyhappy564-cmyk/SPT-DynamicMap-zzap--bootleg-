@@ -19,6 +19,7 @@
 
 ## 변경 이력
 
+- 2026-11-04 12:30 — v2: 세력별 봇 마커 색. RUAF·RUAF 잔당·블랙 디비전·레이더·로그·사이비 교도·보스 부하·터미널 민간인이 스캐브 색 대신 각자 색(F12 "6. 마커 색"에서 바꾸기·끄기).
 - 2026-11-03 04:00 — v1: 새 지도 6종(터미널·인터체인지 리워크·등대 리워크·연구소 리워크·공장 클래식·쇄빙선), 연구소 1층 비밀 연구실, 등대·인터체인지 리워크는 원본 그림 바탕에 바뀐 곳만, 새 지도에 지뢰·저격·못 가는 구역 표시, 지도·F12 한국어(자동이면 게임 언어를 따름), 원본/리워크 지도 자동 선택, 미니맵 끊김 줄이기. 원본 1.2.1 기준.
 
 ## 무엇이 다른가
@@ -30,12 +31,13 @@ SPT 4.1용 DynamicMaps(게임 지도 화면을 쓸 만한 지도로 바꾸는 �
 - **쇄빙선**: 릴리즈 zip에 들어 있습니다(그림 제작: 파인애플애호가). 저장소에는 올리지 않았습니다.
 - **원본/리워크 지도 자동 선택**: MapVariants나 Manimal 백포트 모드가 그 판을 리워크 맵으로 돌리면 리워크 지도, 아니면 원본 지도를 띄웁니다.
 - **한국어**: F12 설정과 지도 글자(지명·탈출구·문·층 이름). F12 "언어" = 자동 / 한국어 / English.
+- **세력별 봇 색**: RUAF·RUAF 잔당·블랙 디비전·레이더·로그·사이비 교도·보스 부하·터미널 민간인을 스캐브 색 대신 각자 색으로 보여 줍니다. F12 "6. 마커 색"에서 색을 바꾸거나 "세력별 색 구분"을 끄면 원래처럼 스캐브 색.
 - **미니맵 끊김 줄이기**: 같은 층이면 다시 계산하지 않고, 확대가 끝난 뒤 한 번만 저장하고, 마커와 지도 그림을 따로 그립니다. F12에 미니맵 갱신 간격 설정 추가.
 - 원본 기능 설명은 [`Plugin/README.md`](Plugin/README.md).
 
 ## 설치
 
-- 릴리즈의 `DynamicMaps-zzap--bootleg--v1.zip`을 SPT 폴더에 풀어 덮어쓰기. 설정은 그대로 유지됩니다.
+- 릴리즈의 `DynamicMaps-zzap--bootleg--v2.zip`을 SPT 폴더에 풀어 덮어쓰기. 설정은 그대로 유지됩니다.
 - **DynamicMaps-Extended와 같이 설치하지 마세요**(같은 모드를 고친 다른 판이라 충돌합니다).
 
 ## 원작자·라이선스
@@ -57,11 +59,12 @@ An edited build of DynamicMaps for SPT 4.1 (the mod that turns the in-game map s
 - **Icebreaker**: shipped in the release zip only, not in this repository (map art by 파인애플애호가).
 - **Original/rework map picked automatically**: when MapVariants or a Manimal backport runs the rework map for a raid, the rework map is shown; otherwise the original.
 - **Korean**: F12 settings and map texts. F12 "Language" = Auto (follows the game language) / Korean / English.
+- **Bot colors by faction**: RUAF, RUAF Remnant, Black Division, Raiders, Rogues, Cultists, boss followers and Terminal civilians get their own marker colors instead of the Scav color. Change them in F12 "6. Marker Colors", or turn off "Color bots by faction".
 - **Less minimap stutter**: no recalculation on the same floor, zoom saved once after you stop, markers drawn apart from the map image. New F12 minimap update interval.
 
 ### Install
 
-- Extract `DynamicMaps-zzap--bootleg--v1.zip` from the release into your SPT folder and overwrite. Settings are kept.
+- Extract `DynamicMaps-zzap--bootleg--v2.zip` from the release into your SPT folder and overwrite. Settings are kept.
 - **Do not install together with DynamicMaps-Extended** (another edit of the same mod; they conflict).
 
 ### Credits / License
