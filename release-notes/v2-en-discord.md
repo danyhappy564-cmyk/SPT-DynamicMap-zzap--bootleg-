@@ -3,7 +3,7 @@
 **- Bot marker colors by faction: RUAF, Black Division, Raiders, Rogues and more**
 
 ■ Changes
-- Bots that all showed the orange Scav color now get a color per faction (not checked in game yet)
+- Bots that all showed the orange Scav color now get a color per faction (checked in raid)
 - RUAF olive, RUAF Remnant khaki, Black Division teal, Terminal civilians white
 - Raiders purple, Rogues light blue, Cultists pink, boss followers brown (Kaban's sniper guards included)
 - Change colors in F12 "6. Marker Colors"; turn off "Color bots by faction" for the old Scav color
