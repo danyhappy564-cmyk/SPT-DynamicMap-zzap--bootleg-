@@ -1,3 +1,8 @@
+<p align="center">
+  <a href="README.md"><img alt="한국어 (현재 문서)" src="https://img.shields.io/badge/%ED%95%9C%EA%B5%AD%EC%96%B4-%ED%98%84%EC%9E%AC%20%EB%AC%B8%EC%84%9C-1f6feb?style=for-the-badge"></a>
+  <a href="README.en.md"><img alt="English" src="https://img.shields.io/badge/English-Read%20in%20English-6e7681?style=for-the-badge"></a>
+</p>
+
 # SPT-DynamicMap-zzap--bootleg-
 
 ---
@@ -19,8 +24,7 @@
 
 ## 변경 이력
 
-- 2026-11-04 12:30 — v2: 세력별 봇 마커 색. RUAF·RUAF 잔당·블랙 디비전·레이더·로그·사이비 교도·보스 부하·터미널 민간인이 스캐브 색 대신 각자 색(F12 "6. 마커 색"에서 바꾸기·끄기).
-- 2026-11-03 04:00 — v1: 새 지도 6종(터미널·인터체인지 리워크·등대 리워크·연구소 리워크·공장 클래식·쇄빙선), 연구소 1층 비밀 연구실, 등대·인터체인지 리워크는 원본 그림 바탕에 바뀐 곳만, 새 지도에 지뢰·저격·못 가는 구역 표시, 지도·F12 한국어(자동이면 게임 언어를 따름), 원본/리워크 지도 자동 선택, 미니맵 끊김 줄이기. 원본 1.2.1 기준.
+전체 변경 이력 2개는 [`changelog/`](changelog/) 폴더에 10개씩 나눠 있습니다 (번호가 클수록 최신, 최신 파일: [`CHANGELOG-001.md`](changelog/CHANGELOG-001.md)). 릴리즈별 요약은 [Releases](../../releases).
 
 ## 무엇이 다른가
 
